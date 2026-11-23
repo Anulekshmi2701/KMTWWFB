@@ -32,7 +32,12 @@ html { scroll-behavior: smooth; }
 .border-primary   { border-color: var(--bs-primary) !important; }
 .border-secondary { border-color: var(--bs-secondary) !important; }
 
-
+body  {  background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .4)), url(../img/count.png);
+background-size: cover;
+background-attachment: fixed;
+background-position: center center;
+background-repeat: no-repeat;
+}
 /*** 3. Spinner ***/
 #spinner {
     opacity: 0;
@@ -352,7 +357,10 @@ html { scroll-behavior: smooth; }
 
 #searchModal .modal-content { background: rgba(240, 245, 251, 0.5); }
 
-
+/* arrows & dots always above the caption, so they stay clickable */
+.carousel-header .carousel-control-prev,
+.carousel-header .carousel-control-next,
+.carousel-header .carousel-indicators { z-index: 5; }
 /*** 9. Single page hero header ***/
 .bg-breadcrumb {
     background: linear-gradient(rgba(var(--maroon-soft-rgb), .9), rgba(var(--bs-primary-rgb), .8)), url(../img/breadcrumb.png);
@@ -362,7 +370,6 @@ html { scroll-behavior: smooth; }
     background-size: cover;
     padding: 100px 0 60px 0;
 }
-
 
 /*** 10. Carousel hero ***/
 .carousel-header .carousel-control-prev .carousel-control-prev-icon,
@@ -401,16 +408,33 @@ html { scroll-behavior: smooth; }
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    min-height: 100vh;
+    height: 70vh;                      /* <-- HERO HEIGHT: change this (60vh = shorter, 80vh = taller) */
+    min-height: 460px;
+    overflow: hidden;
+    background: #2A0A14;
 }
+
+
+/* blurred copy of the same image fills the empty sides (set with style="--bg: url(img/xx.png)") */
+.carousel-header .carousel-inner .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    background: var(--bg) center / cover no-repeat;
+    filter: blur(22px) brightness(.8);
+}
+
 
 .carousel-header .carousel-inner .carousel-item img {
-    position: absolute;
-    width: 100%;
+    display: block;
+    width: 100%;                       /* full width of the section */
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;                 /* fills the whole section, no side bars */
+    object-position: center 65%;       /* keeps the people in view (0% = show top, 100% = show bottom) */
 }
-
 .carousel-header .carousel-inner .carousel-item .carousel-caption {
     position: absolute;
     width: 100%;
@@ -421,14 +445,17 @@ html { scroll-behavior: smooth; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .5);
 }
 
 @media (max-width: 768px) {
-    .carousel-header { height: 700px !important; }
+    .carousel-header .carousel-inner .carousel-item { height: 460px; }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
-    .carousel-header .carousel-control-next .carousel-control-next-icon { margin-top: 500px; }
+    .carousel-header .carousel-control-next .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+    }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon { margin-left: 0; }
     .carousel-header .carousel-control-next .carousel-control-next-icon { margin-right: 0; }
@@ -439,22 +466,62 @@ html { scroll-behavior: smooth; }
 
 /*** 11. About ***/
 .about-img-wrap {
-    overflow: hidden;                  /* enlarged image never overlaps the text */
+    overflow: hidden;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 0; /* Removed top margin to reduce section height */
 }
 
 .about-img {
-    --s: 1.3;                          /* image size */
+    --s: 1.15; /* Adjusted scale so it fits cleanly above the card */
     width: 100%;
+    max-height: 290px;
+    object-fit: contain;
     transform: scale(var(--s));
     transform-origin: center;
     animation: floatY 6s ease-in-out infinite;
 }
 
+/* Left Bottom Experience & Contact Box */
+.about-exp-card {
+    background-color: #f8f5ec;
+    border: 1px solid #e6dcc3;
+    max-width: 460px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.about-exp-card .exp-divider {
+    border-right: 1px solid #dcd0b3;
+}
+
+/* Right Side Feature Cards */
+.about-feature-box {
+    background-color: #efefef;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.about-feature-box:hover {
+    background-color: #e8e8e8;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 1199.98px) {
     .about-img-wrap { margin-top: 0; }
     .about-img { --s: 1; }
+}
+
+@media (max-width: 575.98px) {
+    .about-exp-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .about-exp-card .exp-divider {
+        border-right: none;
+        border-bottom: 1px solid #dcd0b3;
+        padding-right: 0 !important;
+        padding-bottom: 10px;
+    }
 }
 
 @keyframes floatY {
@@ -464,13 +531,13 @@ html { scroll-behavior: smooth; }
 
 
 /*** 12. Counter facts ***/
-.counter-facts {
+/* .counter-facts {
     background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .4)), url(../img/count.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
-}
+} */
 
 .counter-facts .counter {
     position: relative;
@@ -556,6 +623,96 @@ html { scroll-behavior: smooth; }
 
 
 /*** 13. Services ***/
+/*** 13b. Services carousel ***/
+.service-carousel { position: relative; }
+
+.service-carousel .owl-stage-outer { padding: 14px 4px 34px; }
+
+.service-carousel .owl-stage { display: flex; }
+
+.service-carousel .owl-item {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.service-carousel .owl-item .service-item { width: 100%; }
+
+.service-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.service-carousel .owl-nav button.owl-prev,
+.service-carousel .owl-nav button.owl-next {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    font-size: 18px;
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary) !important;
+    transition: .4s var(--ease);
+}
+
+.service-carousel .owl-nav button.owl-prev:hover,
+.service-carousel .owl-nav button.owl-next:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(var(--bs-primary-rgb), .3);
+}
+
+.service-carousel .owl-dots {
+    display: none !important;
+}
+.service-carousel .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.service-carousel .owl-dot {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.service-carousel .owl-dot span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(var(--bs-primary-rgb), .25);
+    transition: .4s var(--ease);
+}
+
+.service-carousel .owl-dot.active span {
+    width: 28px;
+    border-radius: 10px;
+    background: var(--bs-secondary);
+}
+.service-carousel .owl-dot span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: rgba(var(--bs-primary-rgb), .25);
+    transition: .4s var(--ease);
+}
+
+.service-carousel .owl-dot.active span {
+    width: 28px;
+    border-radius: 10px;
+    background: var(--bs-secondary);
+}
 .service { background: linear-gradient(180deg, #FFFBF2 0%, var(--bs-light) 100%); }
 
 .service .row.g-4 > [class*="col-"] { display: flex; }   /* equal-height cards */
@@ -687,16 +844,38 @@ html { scroll-behavior: smooth; }
     }
 }
 
-
 /*** 14. Features ***/
+/* 1. Soft cream background for Online Services so it stands apart from About */
+
+.features {
+    background: linear-gradient(180deg, #FFFBF2 0%, #FAF3E1 100%);
+    border-top: 1px solid rgba(var(--bs-primary-rgb), 0.08);
+    border-bottom: 1px solid rgba(var(--bs-primary-rgb), 0.08);
+}
+
+/* 2. Keep the 4 cards crisp white with a subtle gold top accent so they pop */
+.features .feature-item {
+    background: #FFFFFF;
+    border-top: 3px solid var(--bs-secondary);
+}
+
+/* 3. Keep About section crisp white with clean breathing room */
+.about-wide-section {
+    background: #FFFFFF;
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+} 
 .features .feature-item {
     position: relative;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+    max-width: 240px; /* adjust this value (e.g., 220px - 260px) to control box width */
+    margin: 0 auto;   /* centers the narrower card inside its column */
+    padding: 1.25rem 1rem !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     transition: .5s var(--ease);
 }
 
-.features .feature-item:hover { transform: translateY(-8px); }
+.features .feature-item:hover { transform: translateY(-6px); }
 
 .features .feature-item::after {
     content: "";
@@ -713,11 +892,15 @@ html { scroll-behavior: smooth; }
 
 .features .feature-item:hover::after { height: 100%; }
 
+/* Smaller Icon Box & Icon */
 .features .feature-item .feature-icon {
-    width: 120px;
-    height: 120px;
+    width: 72px;
+    height: 72px;
+    padding: 0.75rem !important;
+    margin: 0 auto 1rem auto !important; /* centers the icon box horizontally */
+    align-self: center;                  /* ensures centering inside flex-column */
     border-radius: 10px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -730,13 +913,37 @@ html { scroll-behavior: smooth; }
     background: var(--bs-white) !important;
 }
 
-.features .feature-item .feature-icon i { transition: 0.5s; }
+.features .feature-item .feature-icon i {
+    font-size: 2rem !important; /* scales down fa-4x */
+    transition: 0.5s;
+}
 
 .features .feature-item:hover .feature-icon i {
     color: var(--bs-secondary) !important;
     transform: rotate(360deg);
 }
 
+/* Smaller Card Text & Button */
+.features .feature-item .feature-content small {
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+}
+
+.features .feature-item .feature-content h5 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem !important;
+}
+
+.features .feature-item .feature-content p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin-bottom: 1rem !important;
+}
+.features .feature-item .feature-content .btn {
+    font-size: 0.82rem;
+    padding: 0.45rem 1.25rem;
+    align-self: center; /* prevents button from stretching full width */
+}
 
 /*** 15. Country / Leadership ***/
 .country .country-item {
@@ -799,18 +1006,37 @@ html { scroll-behavior: smooth; }
 .country .country-item:hover img { transform: scale(1.15); }
 
 .country .country-item .country-name a.fs-4:hover { color: var(--bs-secondary) !important; }
-
-/* leadership: equal-size images */
-.leadership-section .row { align-items: stretch; }
+/* Leadership: Image on top + Light Cream Name Card below */
+.leadership-section .row {
+    align-items: stretch;
+}
 
 .leadership-section .country-item {
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    background-color: #f8f5ec; /* Light Cream background */
+    border: 1px solid #e6dcc3;
 }
 
+/* Remove template's default hover color overlay on image */
+.leadership-section .country-item::after,
+.leadership-section .country-item::before,
+.leadership-section .country-item > .rounded.overflow-hidden::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Image Container */
 .leadership-section .country-item > .rounded.overflow-hidden {
     width: 100%;
     aspect-ratio: 4 / 5;
+    border-radius: 10px 10px 0 0 !important;
+    flex-shrink: 0;
 }
 
 .leadership-section .country-item img {
@@ -819,8 +1045,73 @@ html { scroll-behavior: smooth; }
     object-fit: cover;
     object-position: center 15%;
     display: block;
+    border-radius: 0 !important;
+    transition: transform 0.5s ease;
 }
 
+/* Top Icon Badge */
+.leadership-section .country-item .country-flag {
+    z-index: 3;
+}
+
+/* Attached Light Cream Name Card Below Image */
+.leadership-section .country-item .country-name {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    z-index: 2;
+
+    flex-grow: 1; /* Makes all 4 cards equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 14px;
+    background-color: #f8f5ec !important; /* Light Cream color */
+    border-top: 3px solid #d4a338; /* Gold divider line */
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Force Name & Designation text to be clearly visible */
+.leadership-section .country-item .country-name a {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    font-size: 1.12rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    display: block;
+    text-decoration: none;
+    color: #5c1a28 !important; /* Maroon/Primary text color on cream */
+}
+
+.leadership-section .country-item .country-name span {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    font-size: 0.82rem !important;
+    font-weight: 500;
+    line-height: 1.4;
+    display: block;
+    color: #334155 !important; /* Dark slate color for easy reading */
+}
+
+/* Subtle Hover Effect */
+.leadership-section .country-item:hover img {
+    transform: scale(1.05);
+}
+
+.leadership-section .country-item:hover .country-name {
+    background-color: #f1ebd9 !important; /* Slightly deeper cream on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 991.98px) {
     .leadership-section .country-item {
         max-width: 340px;
@@ -830,8 +1121,12 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 575.98px) {
-    .leadership-section .country-item { max-width: 300px; }
-    .leadership-section .country-item > .rounded.overflow-hidden { aspect-ratio: 1 / 1; }
+    .leadership-section .country-item {
+        max-width: 300px;
+    }
+    .leadership-section .country-item > .rounded.overflow-hidden {
+        aspect-ratio: 1 / 1;
+    }
 }
 
 
@@ -1020,4 +1315,49 @@ html { scroll-behavior: smooth; }
         animation: none !important;
         transition: none !important;
     }
+}
+/*** About Start ***/
+.about .about-img {
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 30px; 
+    margin-left: 30px;
+}
+
+.about .about-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -30px;
+    right: 0;
+    border-radius: 10px;
+    background: var(--bs-secondary);
+
+}
+
+.about .about-img::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    left: -30px;
+    bottom: 30px;
+    border-radius: 10px;
+    background: var(--bs-secondary);
+}
+
+.about .about-img .about-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    background: var(--bs-secondary);
+    color: var(--bs-white);
+    border: 1px solid var(--bs-secondary);
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 10px;
 }
