@@ -1,350 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Acuas - Drinking Water Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>About Us - KMTWWFB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template & Custom About Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+</head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+<body>
 
-    <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block" style="background-color: #5A0E24;">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                <div class="d-flex">
+                    <a href="mailto:motor.worker@gmail.com" class="me-4" style="color: #FAF3E1;"><i class="fas fa-envelope me-2" style="color: #E4B028;"></i>motor.worker@gmail.com</a>
+                    <a href="tel:04742742818" class="me-0" style="color: #FAF3E1;"><i class="fas fa-phone-alt me-2" style="color: #E4B028;"></i>0474-2742818</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center social-icons" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
             </div>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary"><i class="fas fa-hand-holding-water me-3"></i>Acuas</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                <a href="product.html" class="dropdown-item">Our Product</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="d-none d-xl-flex me-3">
-                        <div class="d-flex flex-column pe-3 border-end border-primary">
-                            <span class="text-body">Get Free Delivery</span>
-                            <a href="tel:+4733378901"><span class="text-primary">Free: + 0123 456 7890</span></a>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="display-8 m-0" style="color: #124D1C;"><img src="img/logo.png" class="img-fluid" alt="KMTWWFB logo">KMTWWFB</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
+                        <div class="dropdown-menu m-0">
+                            <a href="feature.html" class="dropdown-item">Feature</a>
+                            <a href="#" class="dropdown-item">Countries</a>
+                            <a href="#" class="dropdown-item">Testimonial</a>
+                            <a href="#" class="dropdown-item">Training</a>
+                            <a href="#" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-md-square d-flex flex-shrink-0 mb-3 mb-lg-0 rounded-circle me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                    <a href="" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">Order Now</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
+                <button class="btn btn-md-square mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal" style="background-color: #124D1C; color: #E4B028;"><i class="fas fa-search"></i></button>
+                <a href="" class="btn rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="background-color: #124D1C; color: #FFFFFF;">ADMIN LOGIN</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Banner Start -->
+    <div class="container-fluid about-page-header py-5 mb-5">
+        <div class="container py-4 text-center">
+            <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold wow fadeInDown" data-wow-delay="0.1s" style="background-color: rgba(228, 176, 40, 0.2); color: #E4B028; border: 1px solid #E4B028;">
+                <i class="fas fa-landmark me-1"></i> DEPARTMENT OF LABOUR AND SKILLS, GOVT. OF KERALA
+            </span>
+            <h1 class="display-4 text-white fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">About KMTWWFB</h1>
+            <p class="text-white-50 mx-auto mb-4 wow fadeInUp" data-wow-delay="0.3s" style="max-width: 720px;">
+                Securing the dignity, financial stability, and social welfare of Kerala’s private motor transport workforce since 1985.
+            </p>
+            <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay="0.4s">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">About The Board</li>
+                </ol>
             </nav>
-
-            <!-- Header Start -->
-            <div class="container-fluid bg-breadcrumb">
-                <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active text-primary">About</li>
-                    </ol>    
-                </div>
-            </div>
-            <!-- Header End -->
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
+    <!-- Page Header Banner End -->
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text btn border p-3"><i class="fa fa-search text-white"></i></span>
+    <!-- Section 1: About The Board (Multi-Image Collage + Overview) -->
+    <section class="about-overview-section py-4 py-lg-5">
+        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+            <div class="row g-5 align-items-center">
+                
+                <!-- Left Column: Multi-Image Collage with Floating Badge -->
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-collage-wrapper position-relative">
+                        <!-- Main Primary Image -->
+                        <div class="collage-main-img rounded-4 overflow-hidden shadow-lg">
+                            <img src="img/about-main.jpg" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80'" alt="Kerala Motor Transport" class="img-fluid w-100">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
 
-        <!-- About Start -->
-        <div class="container-fluid about py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="about-img rounded h-100">
-                            <img src="img/about.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover;" alt="">
-                            <div class="about-exp"><span>20 Years Experiance</span></div>
+                        <!-- Secondary Overlapping Image 1 (Bottom Right) -->
+                        <div class="collage-sub-img rounded-4 overflow-hidden shadow-lg border border-4 border-white d-none d-sm-block wow zoomIn" data-wow-delay="0.4s">
+                            <img src="img/about-sub1.jpg" onerror="this.src='https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80'" alt="Transport Workers" class="img-fluid w-100 h-100 object-fit-cover">
                         </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="about-item">
-                            <h4 class="text-primary text-uppercase">About Us</h4>
-                            <h1 class="display-3 mb-3">We Deliver The Quality Water.</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem quas totam nostrum! Maxime rerum voluptatem sed, facilis unde a aperiam nulla voluptatibus excepturi ipsam iusto consequuntur
-                            </p>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Satisfied Customer</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                        <!-- Secondary Overlapping Image 2 (Top Right Illustration) -->
+                        <div class="collage-top-img rounded-4 overflow-hidden shadow bg-white p-2 border border-2 border-warning d-none d-md-block wow fadeInDown" data-wow-delay="0.5s">
+                            <img src="img/2.gif" onerror="this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=400&q=80'" alt="KMTWWFB Network" class="img-fluid rounded-3">
+                        </div>
+
+                        <!-- Floating Statutory Badge -->
+                        <div class="collage-badge-card rounded-4 p-3 px-4 shadow-lg wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="badge-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-award fa-2x text-warning"></i>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold text-white mb-0">40+ Years</h3>
+                                    <small class="text-white-50">Serving Kerala's Transport Sector</small>
                                 </div>
                             </div>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Standard Product</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-secondary rounded-pill py-3 px-5">Read More</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- About End -->
 
-        <!-- Fact Counter -->
-        <div class="container-fluid counter py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-thumbs-up fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Happy Clients</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">456</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
+                <!-- Right Column: Board Overview & Core Welfare Pillars -->
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="text-uppercase fw-bold" style="color: #5A0E24; letter-spacing: 1.5px; font-size: 13px;">STATUTORY BODY • GOVT. OF KERALA</span>
+                        <span style="width: 45px; height: 2px; background-color: #E4B028; display: inline-block;"></span>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-truck fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Transport</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-users fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Employees</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">53</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-heart fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Years Experiance</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">17</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Fact Counter -->
+                    <h2 class="display-6 fw-bold mb-3" style="color: #10375c;">About the Board</h2>
+                    <p class="text-muted fs-6 lh-base mb-4">
+                        The <strong>Kerala Motor Transport Workers' Welfare Fund Board (KMTWWFB)</strong> is a statutory body functioning under the <strong>Department of Labour and Skills, Government of Kerala</strong>. It was established to ensure social security, financial stability, and welfare for workers employed in the private motor transport sector across the state.
+                    </p>
 
-        <!-- feature Start -->
-        <div class="container-fluid feature bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Feature</h4>
-                    <h1 class="display-3 text-capitalize mb-3">A Trusted Name In Bottled Water Industry</h1>
-                </div>
-                <div class="row g-4">
-                    <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-hand-holding-water text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Quality Check</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                    <!-- Headquarters & State-wide Structure Highlight -->
+                    <div class="hq-highlight-box rounded-4 p-3 p-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="hq-icon rounded-3 flex-shrink-0">
+                                <i class="fas fa-building fa-lg text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-primary mb-1">Headquarters &amp; Statewide Structure</h5>
+                                <p class="text-muted small mb-0 lh-base">
+                                    The Head Office is located in <strong>Kollam</strong>, supported by <strong>14 District Offices</strong> operating across Kerala, each headed by a <strong>District Executive Officer (DEO)</strong> to ensure accessible service delivery at the grassroots level.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-filter text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">5 Steps Filtration</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-recycle text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Composition</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-microscope text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Lab Control</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- feature End -->
-        <!-- Footer Start -->
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Contact Us</h4>
-                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Office of the Chief Executive Officer, KMTWWFB, Jayam Building, MWRA, Mundakkal West, Kollam-691001</a>
-                            <a href="tel:04742742818"><i class="fas fa-phone me-2"></i> 0474-2742818</a>
-                            <a href="tel:04742741288"><i class="fas fa-phone me-2"></i> 0474-2741288</a>
-                            <a href="mailto:motor.worker@gmail.com"><i class="fas fa-envelope me-2"></i> motor.worker@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Useful Links</h4>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php#about"><i class="fas fa-angle-right me-2"></i> About us</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/services"><i class="fas fa-angle-right me-2"></i> Services</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/help-videos"><i class="fas fa-angle-right me-2"></i> Help Videos</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin"><i class="fas fa-angle-right me-2"></i> Employer Login</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/login"><i class="fas fa-angle-right me-2"></i> Official Login</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Policies</h4>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/privacypolicy"><i class="fas fa-angle-right me-2"></i> Privacy policy</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/refundpolicy"><i class="fas fa-angle-right me-2"></i> Refund policy</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php/termsandcondition"><i class="fas fa-angle-right me-2"></i> Terms and Condition</a>
-                            <a href="https://kmtwwfb.kerala.gov.in/index.php#"><i class="fas fa-angle-right me-2"></i> Feedback</a>
-                        </div>
-                    </div>
-                    <!-- Feedback -->
-        <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="footer-item">
-                <h4 class="text-secondary mb-4">Feedback</h4>
-                <form id="feedbackForm" action="submit_feedback.php" method="post">
-                    <!-- Star rating -->
-                    <div class="star-rating mb-3">
-                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Very poor"><i class="fas fa-star"></i></label>
-                    </div>
-                    <input type="text" name="name" class="form-control border-0 mb-3 py-2" placeholder="Your name" required>
-                    <textarea name="message" class="form-control border-0 mb-3" rows="3" placeholder="Your feedback" required></textarea>
-                    <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Submit</button>
-                    <p id="feedbackMsg" class="text-white mt-2 mb-0" style="display:none;">Thank you for your feedback!</p>
-                </form>
-            </div>
-        </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>KMTWWFB</a>, All rights reserved. Copyright IT CELL.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" >KMTWWFB   IT CELL</a> 
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        
+                    <!-- Core Welfare Schemes 3-Card Mini Grid -->
+                    <h5 class="fw-bold text-primary mb-3"><i class="fas fa-shield-alt text-warning me-2"></i> Core Welfare Schemes</h5>
+                    <div class="row g-3">
+                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.3s">
+                            <div class="welfare-mini-card p-3 rounded-3 h-100">
+                                <i class="fas fa-hand-holding-usd fs-3 text-warning mb-2"></i>
+                                <h6 class="fw-bold text-primary small mb-1">Pensions</h6>
+                                <p class="text-muted mb-0" style="font-size: 12px;">Superannuation pension, disability pension, and family pension.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="welfare-mini-card p-3 rounded-3 h-100">
+                                <i class="fas fa-heartbeat fs-3 text-warning mb-2"></i>
+                                <h6 class="fw-bold text-primary small mb-1">Financial &amp; Medical Aid</h6>
+                                <p class="text-muted mb-0" style="font-size: 12px;">Ex-gratia accidental death assistance, medical support &amp; maternity benefits.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.5s">
+                            <div class="welfare-mini-card p-3 rounded-3 h-100">
+                                <i class="fas fa-graduation-cap fs-3 text-warning mb-2"></i>
+                                <h6 class="fw-bold text-primary small mb-1">Family Support</h6>
+                                <p class="text-muted mb-0" style="font-size: 12px;">Educational scholarships for children, daughter marriage aid &amp; retirement benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Tripartite Governance & Administration -->
+    <section class="governance-section py-5 my-4">
+        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 780px;">
+                <span class="badge rounded-pill px-3 py-2 mb-2 fw-bold" style="background-color: #f8f5ec; color: #5A0E24; border: 1px solid #E4B028;">
+                    <i class="fas fa-balance-scale text-warning me-1"></i> ADMINISTRATION &amp; GOVERNANCE
+                </span>
+                <h2 class="display-6 fw-bold text-primary mb-3">15-Member Tripartite Board Structure</h2>
+                <p class="text-muted mb-0">
+                    The Board follows a democratic tripartite governance model headed by a <strong>Government-appointed Chairman</strong> and managed by the <strong>Chief Executive Officer (CEO)</strong>.
+                </p>
+            </div>
+
+            <!-- 4 Cards: Leadership + 3 Tripartite Groups (5 + 5 + 5 = 15 Members) -->
+            <div class="row g-4">
+                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="gov-card rounded-4 p-4 text-center h-100">
+                        <div class="gov-icon-ring mx-auto mb-3">
+                            <i class="fas fa-user-tie fa-2x text-primary"></i>
+                        </div>
+                        <span class="badge bg-primary rounded-pill px-3 py-1 mb-2">Executive Head</span>
+                        <h5 class="fw-bold text-primary mb-2">Chairman &amp; CEO</h5>
+                        <p class="text-muted small mb-0">
+                            Led by a Government-appointed Chairman and administered by the Chief Executive Officer (CEO) at Kollam HQ.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="gov-card rounded-4 p-4 text-center h-100">
+                        <div class="gov-icon-ring mx-auto mb-3">
+                            <span class="fw-bold fs-3 text-primary">05</span>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Government</span>
+                        <h5 class="fw-bold text-primary mb-2">Govt. Representatives</h5>
+                        <p class="text-muted small mb-0">
+                            5 senior officials nominated by the Government of Kerala to oversee policy, statutory compliance, and fund governance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="gov-card rounded-4 p-4 text-center h-100">
+                        <div class="gov-icon-ring mx-auto mb-3">
+                            <span class="fw-bold fs-3 text-primary">05</span>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Employers</span>
+                        <h5 class="fw-bold text-primary mb-2">Employer Representatives</h5>
+                        <p class="text-muted small mb-0">
+                            5 members representing private motor transport vehicle owners and fleet operators across Kerala.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="gov-card rounded-4 p-4 text-center h-100">
+                        <div class="gov-icon-ring mx-auto mb-3">
+                            <span class="fw-bold fs-3 text-primary">05</span>
+                        </div>
+                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Employees</span>
+                        <h5 class="fw-bold text-primary mb-2">Employee Representatives</h5>
+                        <p class="text-muted small mb-0">
+                            5 trade union &amp; worker representatives safeguarding the rights and welfare benefits of transport employees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Historical Milestones Timeline (1985 to Digitalization) -->
+    <section class="history-timeline-section py-5">
+        <div class="container-fluid px-4 px-lg-5" style="max-width: 1360px;">
+            
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 780px;">
+                <span class="badge rounded-pill px-3 py-2 mb-2 fw-bold" style="background-color: #f8f5ec; color: #5A0E24; border: 1px solid #E4B028;">
+                    <i class="fas fa-history text-warning me-1"></i> OUR JOURNEY &amp; EVOLUTION
+                </span>
+                <h2 class="display-6 fw-bold text-primary mb-3">History &amp; Key Milestones</h2>
+                <p class="text-muted mb-0">
+                    From the landmark Act of 1985 to full-scale digital transformation and Direct Benefit Transfers (DBT).
+                </p>
+            </div>
+
+            <!-- Vertical Alternating Timeline -->
+            <div class="kmt-timeline position-relative">
+
+                <!-- Milestone 1: June 27, 1985 -->
+                <div class="timeline-row left wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="timeline-card rounded-4 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="timeline-year-badge">June 27, 1985</span>
+                            <i class="fas fa-gavel fa-lg text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">1985 – Enactment &amp; Inception (Act 21 of 1985)</h5>
+                        <p class="text-muted small mb-0 lh-base">
+                            To provide social security to unorganized motor transport workers (private bus, lorry, taxi, and auto-rickshaw staff) not covered under the Employees' Provident Fund (EPF) Act, the Government of Kerala enacted the <strong>Kerala Motor Transport Workers' Welfare Fund Act, 1985</strong>, which came into force on <strong>June 27, 1985</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: July 11, 1985 -->
+                <div class="timeline-row right wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="timeline-card rounded-4 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="timeline-year-badge">July 11, 1985</span>
+                            <i class="fas fa-flag-checkered fa-lg text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Launch of the Welfare Fund Scheme</h5>
+                        <p class="text-muted small mb-0 lh-base">
+                            Following the enactment of the Act, the <strong>Kerala Motor Transport Workers' Welfare Fund Scheme</strong> was officially framed and implemented on <strong>July 11, 1985</strong>, formally establishing the Board to administer the welfare fund across Kerala.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: 2005 Amendment -->
+                <div class="timeline-row left wow fadeInLeft" data-wow-delay="0.3s">
+                    <div class="timeline-card rounded-4 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="timeline-year-badge">2005 Amendment</span>
+                            <i class="fas fa-taxi fa-lg text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">2005 – Major Amendment &amp; Self-Employed Inclusion</h5>
+                        <p class="text-muted small mb-0 lh-base">
+                            Initially, coverage was limited to traditional employer-employee setups. Through the <strong>Amendment Act of 2005 (Act 23 of 2005)</strong>, the scope was significantly expanded to bring <strong>self-employed motor transport workers</strong> (owner-cum-drivers of autos, taxis, and goods vehicles) under the welfare net.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4: Motor Vehicle Tax Linkage -->
+                <div class="timeline-row right wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="timeline-card rounded-4 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="timeline-year-badge">Statutory Linkage</span>
+                            <i class="fas fa-file-invoice-dollar fa-lg text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Motor Vehicle Tax Linkage</h5>
+                        <p class="text-muted small mb-0 lh-base">
+                            The 2005 amendment introduced a crucial mandate requiring vehicle owners to produce a <strong>Welfare Fund Contribution Clearance Certificate</strong> while paying Motor Vehicle Tax, leading to massive growth in active membership and long-term fund sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 5: Modernization & Digitalization -->
+                <div class="timeline-row left wow fadeInLeft" data-wow-delay="0.5s">
+                    <div class="timeline-card rounded-4 p-4 border-warning">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="timeline-year-badge bg-warning text-dark">Digital Era</span>
+                            <i class="fas fa-laptop-code fa-lg text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Modernization &amp; Digitalization</h5>
+                        <p class="text-muted small mb-0 lh-base">
+                            Over the past decade, the Board transitioned from manual record-keeping to a <strong>centralized online portal</strong>, streamlining member registration, e-payment of contributions, instant clearance certificates, and <strong>Direct Benefit Transfers (DBT)</strong> for pensions and educational scholarships.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Call-to-Action Strip with Gallery Preview -->
+            <div class="about-cta-banner rounded-4 p-4 p-md-5 mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h3 class="fw-bold text-white mb-2">Explore KMTWWFB Online Services &amp; Welfare Schemes</h3>
+                        <p class="text-white-50 mb-0">
+                            Register online as an employee or vehicle owner, pay monthly contributions seamlessly, or apply for welfare benefits.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="service.html" class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-3 shadow-lg me-2">
+                            Explore Services <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Contact Us</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Office of the Chief Executive Officer, KMTWWFB, Jayam Building, MWRA, Mundakkal West, Kollam-691001</a>
+                        <a href="tel:04742742818"><i class="fas fa-phone me-2"></i> 0474-2742818</a>
+                        <a href="tel:04742741288"><i class="fas fa-phone me-2"></i> 0474-2741288</a>
+                        <a href="mailto:motor.worker@gmail.com"><i class="fas fa-envelope me-2"></i> motor.worker@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Useful Links</h4>
+                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About us</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/help-videos"><i class="fas fa-angle-right me-2"></i> Help Videos</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin"><i class="fas fa-angle-right me-2"></i> Employer Login</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/login"><i class="fas fa-angle-right me-2"></i> Official Login</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Policies</h4>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/privacypolicy"><i class="fas fa-angle-right me-2"></i> Privacy policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/refundpolicy"><i class="fas fa-angle-right me-2"></i> Refund policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/termsandcondition"><i class="fas fa-angle-right me-2"></i> Terms and Condition</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Feedback</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Feedback</h4>
+                        <form id="feedbackForm" action="submit_feedback.php" method="post">
+                            <div class="star-rating mb-3">
+                                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Very poor"><i class="fas fa-star"></i></label>
+                            </div>
+                            <input type="text" name="name" class="form-control border-0 mb-3 py-2" placeholder="Your name" required>
+                            <textarea name="message" class="form-control border-0 mb-3" rows="3" placeholder="Your feedback" required></textarea>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Submit</button>
+                            <p id="feedbackMsg" class="text-white mt-2 mb-0" style="display:none;">Thank you for your feedback!</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>KMTWWFB</a>, All rights reserved. Copyright IT CELL.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    Designed By <a class="border-bottom text-white">KMTWWFB IT CELL</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -353,10 +469,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
-
+ 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
-
+</body>
 </html>

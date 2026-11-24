@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>KMTWWFB - Vehicle Registration Guide</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/instruction.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block" style="background-color: #5A0E24;">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                <div class="d-flex">
+                    <a href="mailto:motor.worker@gmail.com" class="me-4" style="color: #FAF3E1;"><i class="fas fa-envelope me-2" style="color: #E4B028;"></i>motor.worker@gmail.com</a>
+                    <a href="tel:04742742818" class="me-0" style="color: #FAF3E1;"><i class="fas fa-phone-alt me-2" style="color: #E4B028;"></i>0474-2742818</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center social-icons" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="display-8 m-0" style="color: #124D1C;"><img src="img/logo.png" class="img-fluid" alt="KMTWWFB logo">KMTWWFB</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link active">Service</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
+                        <div class="dropdown-menu m-0">
+                            <a href="feature.html" class="dropdown-item">Feature</a>
+                            <a href="#" class="dropdown-item">Countries</a>
+                            <a href="#" class="dropdown-item">Testimonial</a>
+                            <a href="#" class="dropdown-item">Training</a>
+                            <a href="#" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn btn-md-square mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal" style="background-color: #124D1C; color: #E4B028;"><i class="fas fa-search"></i></button>
+                <a href="" class="btn rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="background-color: #124D1C; color: #FFFFFF;">ADMIN LOGIN</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+   <!-- Vehicle Registration Instruction Page Start -->
+<section class="instruction-page-section py-4 py-lg-5">
+    <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+        
+        <!-- Breadcrumb Navigation -->
+        <!-- <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 wow fadeInDown" data-wow-delay="0.1s">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 bg-white px-3 py-2 rounded-pill shadow-sm border">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-primary fw-semibold"><i class="fas fa-home me-1"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services" class="text-decoration-none text-primary fw-semibold">Digital Services</a></li>
+                    <li class="breadcrumb-item active text-muted" aria-current="page">Vehicle Registration Guide</li>
+                </ol>
+            </nav>
+            <a href="index.html" class="btn btn-outline-maroon rounded-pill px-4 btn-sm fw-semibold">
+                <i class="fas fa-arrow-left me-2"></i> Back to Services
+            </a>
+        </div> -->
+
+        <!-- White Hero Banner -->
+        <div class="instruction-hero-card rounded-4 overflow-hidden mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-7 p-4 p-md-5">
+                    <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold" style="background-color: #f8f5ec; color: #5A0E24; border: 1px solid #d4a338;">
+                        <i class="fas fa-truck-moving text-warning me-1"></i> VEHICLE REGISTRATION WORKFLOW
+                    </span>
+                    <h1 class="display-6 fw-bold mb-3" style="color: #5A0E24;">Vehicle Registration (Form 2, Form 3 &amp; Form 1)</h1>
+                    <p class="mb-4 fs-6 lh-base" style="color: #475569;">
+                        Follow the exact sequential process below: <strong>Login → Form 2 (Vehicle &amp; Owner Details) → Form 3 (Worker Details) → Form 1 (Self-Employment) → Declaration Agree &amp; ₹25 Payment</strong>.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3">
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin" target="_blank" class="btn btn-water-fill btn-water-gold rounded-pill px-4 py-3 fw-bold shadow-sm">
+                            <span class="btn-text">
+                                Proceed to Vehicle / Employer Login <i class="fas fa-external-link-alt ms-2"></i>
+                            </span>
+                            <span class="liquid-wave"></span>
+                        </a>
+                        <a href="#step-by-step-flow" class="btn btn-water-fill btn-water-outline rounded-pill py-3 px-4 fw-semibold">
+                            <span class="btn-text">
+                                <i class="fas fa-list-ol me-2"></i> View Exact Order
+                            </span>
+                            <span class="liquid-wave"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block position-relative hero-img-col">
+                    <div class="p-4 text-center position-relative">
+                        <img src="img/vehile reg.gif" 
+                             alt="Vehicle Registration Guide" 
+                             class="img-fluid hero-white-gif" style="max-height: 500px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Step Exact Sequential Order Bar -->
+        <div class="row g-3 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-6 col-md-4 col-lg">
+                <div class="step-mini-card text-center p-3 rounded-3 h-100">
+                    <div class="step-num mx-auto mb-2">01</div>
+                    <h6 class="fw-bold text-primary mb-1 small">1. Login / Register</h6>
+                    <p class="text-muted mb-0" style="font-size: 12px;">Login to Employer Portal &amp; click "Add Vehicle"</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+                <div class="step-mini-card text-center p-3 rounded-3 h-100">
+                    <div class="step-num mx-auto mb-2">02</div>
+                    <h6 class="fw-bold text-primary mb-1 small">2. Form 2</h6>
+                    <p class="text-muted mb-0" style="font-size: 12px;">Enter Vehicle &amp; Owner Details + RC Upload</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg">
+                <div class="step-mini-card text-center p-3 rounded-3 h-100">
+                    <div class="step-num mx-auto mb-2">03</div>
+                    <h6 class="fw-bold text-primary mb-1 small">3. Form 3</h6>
+                    <p class="text-muted mb-0" style="font-size: 12px;">Worker Details Entry Page (Assign Employees)</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg">
+                <div class="step-mini-card text-center p-3 rounded-3 h-100">
+                    <div class="step-num mx-auto mb-2">04</div>
+                    <h6 class="fw-bold text-primary mb-1 small">4. Form 1 (Self-Emp)</h6>
+                    <p class="text-muted mb-0" style="font-size: 12px;">Tick Self-Employment &amp; fill Form 1 details</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg">
+                <div class="step-mini-card text-center p-3 rounded-3 h-100 border-warning">
+                    <div class="step-num mx-auto mb-2 bg-warning text-dark">05</div>
+                    <h6 class="fw-bold text-primary mb-1 small">5. Agree &amp; ₹25 Pay</h6>
+                    <p class="text-muted mb-0" style="font-size: 12px;">Tick Declaration "I Agree" &amp; pay ₹25 fee</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div id="step-by-step-flow" class="row g-4 g-xl-5">
+            
+            <!-- Left Column: Exact Order Step-by-Step Guide -->
+            <div class="col-lg-8">
+
+                <div class="d-flex align-items-center gap-2 mb-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <span class="section-indicator"></span>
+                    <h4 class="fw-bold text-primary mb-0">Step-by-Step Vehicle Registration Order</h4>
+                </div>
+                <p class="text-muted small mb-4">Click each stage below to view the exact fields and instructions in sequential order:</p>
+
+                <div class="accordion custom-guide-accordion mb-5 wow fadeInUp" data-wow-delay="0.3s" id="vehicleOrderAccordion">
+                    
+                    <!-- STAGE 1: LOGIN -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stage1" aria-expanded="true">
+                                <span class="badge bg-primary me-3">Step 1</span>
+                                <span>Portal Login &amp; Select "Add Vehicle"</span>
+                            </button>
+                        </h2>
+                        <div id="stage1" class="accordion-collapse collapse show" data-bs-parent="#vehicleOrderAccordion">
+                            <div class="accordion-body bg-white">
+                                <ul class="guide-list mb-3">
+                                    <li><strong>Login:</strong> Log in to the Employer / Vehicle Portal using your registered credentials.</li>
+                                    <li><strong>New User Registration:</strong> If you do not have a login account yet, complete the new user registration first and then log in.</li>
+                                    <li><strong>Add Vehicle:</strong> Once logged in, select the <strong>"Add Vehicle"</strong> option from your dashboard.</li>
+                                </ul>
+                                <!-- <div class="p-3 rounded-3" style="background-color: #f8f5ec; border: 1px dashed #d4a338;">
+                                    <h6 class="fw-bold text-primary small mb-2"><i class="fas fa-user-shield me-1 text-secondary"></i> Employer Profile Details Displayed:</h6>
+                                    <div class="row g-2 small text-muted">
+                                        <div class="col-sm-4">• Name of Employer</div>
+                                        <div class="col-sm-4">• Address of Employer</div>
+                                        <div class="col-sm-4">• Mobile Number</div>
+                                        <div class="col-sm-4">• Email ID</div>
+                                        <div class="col-sm-4">• Date of Birth</div>
+                                        <div class="col-sm-4">• District</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 2: FORM 2 -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stage2">
+                                <span class="badge bg-primary me-3">Step 2</span>
+                                <span>Form 2 — Vehicle &amp; Vehicle Owner Details</span>
+                            </button>
+                        </h2>
+                        <div id="stage2" class="accordion-collapse collapse" data-bs-parent="#vehicleOrderAccordion">
+                            <div class="accordion-body bg-white">
+                                <p class="small text-muted mb-3">The first page after clicking <strong>Add Vehicle</strong> is <strong>Form Two</strong>. Enter the vehicle and owner details here:</p>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <ul class="guide-list small mb-0">
+                                            <li><strong>Vehicle Number *:</strong> Enter the vehicle registration number.</li>
+                                            <li><strong>Type of Vehicle *:</strong> Select vehicle type.</li>
+                                            <li><strong>Reg. Date *:</strong> Vehicle registration date.</li>
+                                            <li><strong>Current Employer Reg. Date:</strong> Registration date under the current employer.</li>
+                                            <li><strong>District *:</strong> Select the applicable district.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="guide-list small mb-0">
+                                            <li><strong>Name of Employer *:</strong> Tick <em>"Same As Profile Owner"</em> if applicable.</li>
+                                            <li><strong>Address of Employer * &amp; Pin Code *:</strong> Complete owner address.</li>
+                                            <li><strong>Additional Details if any:</strong> Extra remarks (optional).</li>
+                                            <li><strong>Form 2 Uploads:</strong> RC Book *, Permit, and Other Supporting Documents.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="alert alert-warning py-2 px-3 small mb-0 border-warning">
+                                    <i class="fas fa-exclamation-circle me-1"></i> <strong>Note:</strong> If the profile creator is not the actual Employer of the vehicle, untick <strong>"Same as Profile Owner"</strong> and enter the actual Employer's name before submitting.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 3: FORM 3 (WORKER DETAILS PAGE) -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stage3">
+                                <span class="badge bg-primary me-3">Step 3</span>
+                                <span>Form 3 — Worker Details Entry Page</span>
+                            </button>
+                        </h2>
+                        <div id="stage3" class="accordion-collapse collapse" data-bs-parent="#vehicleOrderAccordion">
+                            <div class="accordion-body bg-white">
+                                <p class="small text-muted mb-3"><strong>Form 3</strong> is the dedicated page for entering the details of workers employed in the vehicle:</p>
+                                <div class="p-3 rounded-3 mb-3" style="background-color: #f8f5ec; border: 1px solid #e6dcc3;">
+                                    <h6 class="fw-bold text-primary small mb-2"><i class="fas fa-users me-1 text-secondary"></i> Worker Details Required in Form 3:</h6>
+                                    <div class="row g-2 small text-dark">
+                                        <div class="col-6 col-md-4">• Vehicle Number *</div>
+                                        <div class="col-6 col-md-4">• Employee Name *</div>
+                                        <div class="col-6 col-md-4">• Job Role *</div>
+                                        <div class="col-6 col-md-4">• Employee Address</div>
+                                        <div class="col-6 col-md-4">• Work Assigned From *</div>
+                                        <div class="col-6 col-md-4">• Mobile Number</div>
+                                        <div class="col-6 col-md-4">• Email ID</div>
+                                        <div class="col-6 col-md-4">• Aadhaar Number</div>
+                                        <div class="col-6 col-md-4">• Remarks</div>
+                                    </div>
+                                </div>
+                                <div class="p-3 rounded-3 border-start border-4 border-primary bg-light small">
+                                    <strong>Important for Employers with Workers:</strong> After adding workers in Form 3, each worker must separately apply through the <strong>Employee Registration Page</strong> and pay <strong>₹25</strong> to complete their individual registration.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 4: FORM 1 (SELF-EMPLOYMENT) -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stage4">
+                                <span class="badge bg-primary me-3">Step 4</span>
+                                <span>Form 1 — Self-Employment Application (If Applicable)</span>
+                            </button>
+                        </h2>
+                        <div id="stage4" class="accordion-collapse collapse" data-bs-parent="#vehicleOrderAccordion">
+                            <div class="accordion-body bg-white">
+                                <p class="small text-muted mb-3">If the vehicle owner is self-employed (working on their own vehicle), tick the <strong>"Self Employment"</strong> checkbox and complete the <strong>Form 1 Application</strong>:</p>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold text-primary small border-bottom pb-2">Personal &amp; Local Body Details:</h6>
+                                        <ul class="guide-list small mb-0">
+                                            <li>Name of Employee *, Father's Name *, Aadhaar Number *</li>
+                                            <li>Address *, Pincode *, DOB &amp; Age *, Gender *</li>
+                                            <li>Mobile Number *, Email, Job Role *, Marital Status *</li>
+                                            <li>General &amp; Technical Education, Service Commencement Date *</li>
+                                            <li>Local Body: District, Taluk *, Village *, Place *</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold text-primary small border-bottom pb-2">Licence, Bank, Nominee &amp; Family:</h6>
+                                        <ul class="guide-list small mb-0">
+                                            <li><strong>Licence:</strong> Licence No. *, Expiry Date *, Badge Available *, Badge No. &amp; Expiry Date</li>
+                                            <li><strong>Bank:</strong> Account No. *, IFSC Code *, Bank *, Branch *</li>
+                                            <li><strong>Uploads:</strong> Licence *, RC Book *, Bank Passbook *, Ration Card *, Photo *, Aadhaar *, One &amp; Same Certificate</li>
+                                            <li><strong>Nominees &amp; Family Profile:</strong> Nominee Name, Address with Pincode, Age, Relation, Percentage (100%) + Family Members table</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 5: DECLARATION AGREE & ₹25 PAYMENT -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stage5">
+                                <span class="badge bg-warning text-dark me-3">Step 5</span>
+                                <span>Declaration "I Agree", Final Submission &amp; ₹25 Payment</span>
+                            </button>
+                        </h2>
+                        <div id="stage5" class="accordion-collapse collapse" data-bs-parent="#vehicleOrderAccordion">
+                            <div class="accordion-body bg-white">
+                                <div class="p-3 rounded-3 mb-3" style="background-color: #f8f5ec; border-left: 4px solid #d4a338;">
+                                    <small class="text-dark d-block fst-italic mb-2">
+                                        "I hereby declare that the above-stated information is true to my knowledge, and I acknowledge that I will proceed with my application according to the rules and regulations set forth by the Kerala Motor Transport Workers Welfare Fund Board."
+                                    </small>
+                                    <span class="badge bg-primary"><i class="fas fa-check-square me-1"></i> Tick "I Agree"</span>
+                                </div>
+                                <ul class="guide-list small mb-0">
+                                    <li><strong>For Self-Employed Applicants:</strong> Tick <strong>"I Agree"</strong> on the declaration, click <strong>Final Submit</strong>, and pay the <strong>₹25 registration fee</strong> online to complete your registration.</li>
+                                    <li><strong>For Employers with Workers (Form 3):</strong> After submitting Form 2 &amp; Form 3, ensure each added worker logs into the <strong>Employee Registration</strong> module, submits their application, and pays the <strong>₹25 fee</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Required Documents Checklist -->
+                <div id="required-docs" class="doc-checklist-card rounded-4 p-4 p-md-5 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4 pb-3 border-bottom">
+                        <div>
+                            <h4 class="fw-bold text-primary mb-1"><i class="fas fa-folder-open text-secondary me-2"></i> Required Documents Checklist</h4>
+                            <p class="text-muted small mb-0">Keep scanned copies ready before starting Form 2 &amp; Form 1</p>
+                        </div>
+                        <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill">
+                            <i class="fas fa-exclamation-triangle me-1"></i> PDF, JPG, PNG only (Max 2MB)
+                        </span>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-car text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">RC Book <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 2 &amp; Form 1</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-file-contract text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Vehicle Permit</h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 2 Upload</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-id-badge text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Driving Licence <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 1 (Self-Emp)</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-university text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Bank Passbook <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 1 (Self-Emp)</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-book-open text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Ration Card <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 1 (Self-Emp)</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-camera text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Applicant Photo <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Form 1 (Self-Emp)</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3">
+                                <i class="fas fa-address-card text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">Aadhaar Card <span class="text-danger">*</span></h6>
+                                    <small class="text-muted" style="font-size: 11px;">Mandatory Identity Proof</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="doc-item-box d-flex align-items-center p-3 rounded-3 bg-light">
+                                <i class="fas fa-file-alt text-secondary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark small">One and Same Certificate</h6>
+                                    <small class="text-muted" style="font-size: 11px;">Optional Supporting Doc</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Sticky Quick Action Card & Other Services -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 100px; z-index: 10;">
+                    
+                    <!-- Ready to Apply Action Box -->
+                    <div class="portal-launch-card rounded-4 p-4 mb-4 text-center wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="launch-icon-circle mx-auto mb-3">
+                            <i class="fas fa-truck fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-2">Start Vehicle Registration</h4>
+                        <p class="text-muted small mb-3">
+                            Follow the sequence: <strong>Login → Form 2 → Form 3 → Form 1 (Self-Emp) → Declaration &amp; ₹25 Payment</strong>.
+                        </p>
+
+                        <div class="d-inline-block rounded-pill px-3 py-1 mb-4 small fw-bold" style="background-color: #f8f5ec; color: #5A0E24; border: 1px solid #d4a338;">
+                            <i class="fas fa-rupee-sign text-warning me-1"></i> Final Registration Fee: ₹25/-
+                        </div>
+
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin" target="_blank" class="btn btn-water-fill btn-water-gold w-100 rounded-pill py-3 fw-bold shadow-sm mb-3">
+                            <span class="btn-text">
+                                Open Employer / Vehicle Portal <i class="fas fa-arrow-right ms-2"></i>
+                            </span>
+                            <span class="liquid-wave"></span>
+                        </a>
+
+                        <div class="d-flex align-items-center justify-content-center gap-2 text-muted small pt-2 border-top">
+                            <i class="fas fa-headset text-secondary"></i>
+                            <span>Helpdesk: <strong class="text-primary">0474-2742818</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Other Quick Access Services Switcher -->
+                    <div class="bg-white rounded-4 p-4 border shadow-sm wow fadeInRight" data-wow-delay="0.3s">
+                        <h6 class="fw-bold text-primary mb-3 pb-2 border-bottom">
+                            <i class="fas fa-th-large text-secondary me-2"></i> Other Digital Services
+                        </h6>
+                        <div class="list-group list-group-flush service-nav-list">
+                            <a href="employee.html" class="list-group-item list-group-item-action rounded-3 mb-1">
+                                <i class="fas fa-user-plus me-2"></i> Employee Registration
+                            </a>
+                            <a href="employee.html" class="list-group-item list-group-item-action active rounded-3 mb-1">
+                                <i class="fas fa-truck me-2"></i> Vehicle Registration (Form 2 &amp; 3)
+                            </a>
+                            <a href="Payment.html" class="list-group-item list-group-item-action rounded-3 mb-1">
+                                <i class="fas fa-rupee-sign me-2"></i> Online Contribution Payment
+                            </a>
+                            <a href="welfare.html" class="list-group-item list-group-item-action rounded-3 mb-1">
+                                <i class="fas fa-hand-holding-heart me-2"></i> Welfare Benefits
+                            </a>
+                            <a href="status.html" class="list-group-item list-group-item-action rounded-3">
+                                <i class="fas fa-search me-2"></i> Application Status Tracking
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Vehicle Registration Instruction Page End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Contact Us</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Office of the Chief Executive Officer, KMTWWFB, Jayam Building, MWRA, Mundakkal West, Kollam-691001</a>
+                        <a href="tel:04742742818"><i class="fas fa-phone me-2"></i> 0474-2742818</a>
+                        <a href="tel:04742741288"><i class="fas fa-phone me-2"></i> 0474-2741288</a>
+                        <a href="mailto:motor.worker@gmail.com"><i class="fas fa-envelope me-2"></i> motor.worker@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Useful Links</h4>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php#about"><i class="fas fa-angle-right me-2"></i> About us</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/services"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/help-videos"><i class="fas fa-angle-right me-2"></i> Help Videos</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin"><i class="fas fa-angle-right me-2"></i> Employer Login</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/login"><i class="fas fa-angle-right me-2"></i> Official Login</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Policies</h4>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/privacypolicy"><i class="fas fa-angle-right me-2"></i> Privacy policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/refundpolicy"><i class="fas fa-angle-right me-2"></i> Refund policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/termsandcondition"><i class="fas fa-angle-right me-2"></i> Terms and Condition</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php#"><i class="fas fa-angle-right me-2"></i> Feedback</a>
+                    </div>
+                </div>
+                <!-- Feedback -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Feedback</h4>
+                        <form id="feedbackForm" action="submit_feedback.php" method="post">
+                            <div class="star-rating mb-3">
+                                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Very poor"><i class="fas fa-star"></i></label>
+                            </div>
+                            <input type="text" name="name" class="form-control border-0 mb-3 py-2" placeholder="Your name" required>
+                            <textarea name="message" class="form-control border-0 mb-3" rows="3" placeholder="Your feedback" required></textarea>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Submit</button>
+                            <p id="feedbackMsg" class="text-white mt-2 mb-0" style="display:none;">Thank you for your feedback!</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>KMTWWFB</a>, All rights reserved. Copyright IT CELL.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    Designed By <a class="border-bottom text-white">KMTWWFB IT CELL</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ 
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

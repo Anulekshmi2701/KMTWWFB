@@ -32,7 +32,7 @@ html { scroll-behavior: smooth; }
 .border-primary   { border-color: var(--bs-primary) !important; }
 .border-secondary { border-color: var(--bs-secondary) !important; }
 
-body  {  background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .4)), url(../img/count.png);
+.leadership-section,.counter-facts{  background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .4)), url(../img/count.png);
 background-size: cover;
 background-attachment: fixed;
 background-position: center center;

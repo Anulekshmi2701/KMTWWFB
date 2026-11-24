@@ -1,0 +1,219 @@
+
+/* White Hero Banner */
+.instruction-hero-card {
+    background-color: #ffffff;
+}
+
+/* GIF on White Background */
+.hero-white-gif {
+    max-height: 290px;
+    width: auto;
+    border-radius: 16px;
+    animation: floatHero 5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.hero-white-gif:hover {
+    transform: scale(1.03);
+}
+
+@keyframes floatHero {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Primary Maroon CTA Button (for White Hero Banner) */
+.btn-maroon-cta {
+    background-color: var(--bs-primary, #5c1a28);
+    color: #ffffff !important;
+    border: 2px solid var(--bs-primary, #5c1a28);
+    transition: all 0.35s ease;
+}
+
+.btn-maroon-cta:hover {
+    background-color: var(--bs-secondary, #d4a338);
+    color: var(--bs-primary, #5c1a28) !important;
+    border-color: var(--bs-secondary, #d4a338);
+    transform: translateY(-3px);
+}
+
+/* Outline Maroon Button (for White Hero Banner) */
+.btn-outline-maroon {
+    background-color: transparent;
+    color: var(--bs-primary, #5c1a28) !important;
+    border: 2px solid var(--bs-primary, #5c1a28);
+    transition: all 0.35s ease;
+}
+
+.btn-outline-maroon:hover {
+    background-color: #f8f5ec;
+    color: var(--bs-primary, #5c1a28) !important;
+    transform: translateY(-3px);
+}
+
+/* 4 Mini Step Cards */
+.step-mini-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dcc3;
+    transition: all 0.3s ease;
+}
+
+.step-mini-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--bs-secondary, #d4a338);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.step-mini-card .step-num {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    background-color: #f8f5ec;
+    color: var(--bs-primary, #5c1a28);
+    font-weight: 800;
+    font-size: 13px;
+    border: 1px solid var(--bs-secondary, #d4a338);
+    transition: all 0.3s ease;
+}
+
+.step-mini-card:hover .step-num {
+    background-color: var(--bs-primary, #5c1a28);
+    color: #ffffff;
+}
+
+/* Section Title Left Bar */
+.section-indicator {
+    width: 5px;
+    height: 26px;
+    background-color: var(--bs-secondary, #d4a338);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Custom Accordion Styling */
+.custom-guide-accordion .accordion-item {
+    border-color: #e6dcc3 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.custom-guide-accordion .accordion-button {
+    background-color: #f8f5ec;
+    padding: 16px 20px;
+    font-size: 1rem;
+    box-shadow: none !important;
+}
+
+.custom-guide-accordion .accordion-button:not(.collapsed) {
+    background-color: #f3ecda;
+    color: var(--bs-primary, #5c1a28);
+    border-bottom: 1px solid #e6dcc3;
+}
+
+.guide-list {
+    padding-left: 1.2rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.guide-list li {
+    margin-bottom: 6px;
+}
+
+/* Required Documents Card */
+.doc-checklist-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dcc3;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.doc-item-box {
+    background-color: #f8f5ec;
+}
+/* Base Water Bottle Fill Button (No continuous spinning) */
+.btn-water-fill {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-water-fill .btn-text {
+    position: relative;
+    z-index: 3;
+    transition: color 0.6s ease;
+}
+
+/* Liquid Layer (Starts empty at the bottom, only moves on hover/click) */
+.btn-water-fill .liquid-wave {
+    position: absolute;
+    left: -15%;
+    bottom: -180%;
+    width: 130%;
+    height: 190%;
+    border-radius: 42% 45% 0 0; /* Smooth curved water surface */
+    z-index: 2;
+    transform: rotate(-4deg);
+    transition: bottom 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s ease, border-radius 0.9s ease;
+    pointer-events: none;
+}
+
+/* Fill up smoothly ONLY on Hover or Click */
+.btn-water-fill:hover .liquid-wave,
+.btn-water-fill:active .liquid-wave,
+.btn-water-fill:focus .liquid-wave {
+    bottom: -10%;
+    transform: rotate(0deg);
+    border-radius: 15% 15% 0 0;
+}
+
+.btn-water-fill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(92, 26, 40, 0.2) !important;
+}
+
+/* --- Button 1: Gold Button filling with Maroon Liquid --- */
+.btn-water-gold {
+    background-color: var(--bs-secondary, #d4a338);
+    border: 2px solid var(--bs-secondary, #d4a338);
+}
+
+.btn-water-gold .btn-text {
+    color: var(--bs-primary, #5c1a28);
+}
+
+.btn-water-gold .liquid-wave {
+    background-color: var(--bs-primary, #5c1a28);
+}
+
+.btn-water-gold:hover .btn-text,
+.btn-water-gold:active .btn-text {
+    color: #ffffff;
+}
+
+.btn-water-gold:hover {
+    border-color: var(--bs-primary, #5c1a28);
+}
+
+/* --- Button 2: Outline Maroon Button filling with Maroon Liquid --- */
+.btn-water-outline {
+    background-color: #ffffff;
+    border: 2px solid var(--bs-primary, #5c1a28);
+}
+
+.btn-water-outline .btn-text {
+    color: var(--bs-primary, #5c1a28);
+}
+
+.btn-water-outline .liquid-wave {
+    background-color: var(--bs-primary, #5c1a28);
+}
+
+.btn-water-outline:hover .btn-text,
+.btn-water-outline:active .btn-text {
+    color: #ffffff;
+}

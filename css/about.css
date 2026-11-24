@@ -1,0 +1,282 @@
+/*** About Us Page Styles (css/about.css) ***/
+
+/* Top Page Header Banner */
+.about-page-header {
+    background: linear-gradient(135deg, rgba(90, 14, 36, 0.94) 0%, rgba(45, 7, 18, 0.96) 100%),
+                url('../img/about-banner-bg.jpg') center/cover no-repeat;
+    border-bottom: 4px solid #E4B028;
+}
+
+/* Multi-Image Collage Layout */
+.about-collage-wrapper {
+    padding: 20px 30px 45px 0;
+}
+
+.collage-main-img {
+    width: 85%;
+    height: 410px;
+    border: 4px solid #ffffff;
+    transition: transform 0.5s ease;
+}
+
+.collage-main-img img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.collage-main-img:hover img {
+    transform: scale(1.06);
+}
+
+/* Bottom-Right Overlapping Photo */
+.collage-sub-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 230px;
+    height: 190px;
+    z-index: 3;
+    transition: transform 0.4s ease;
+}
+
+.collage-sub-img:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* Top-Right Floating GIF/Image Card */
+.collage-top-img {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    width: 150px;
+    height: 150px;
+    z-index: 3;
+    animation: floatBadge 5s ease-in-out infinite;
+}
+
+.collage-top-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Floating Statutory Experience Badge */
+.collage-badge-card {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    background: linear-gradient(135deg, #5A0E24 0%, #3a0817 100%);
+    border-left: 5px solid #E4B028;
+    z-index: 4;
+    transition: transform 0.35s ease;
+}
+
+.collage-badge-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-icon-box {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(228, 176, 40, 0.15);
+    border: 1px solid #E4B028;
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Headquarters Box */
+.hq-highlight-box {
+    background-color: #f8f5ec;
+    border: 1px solid #e6dcc3;
+    border-left: 4px solid #5A0E24;
+    transition: all 0.3s ease;
+}
+
+.hq-highlight-box:hover {
+    box-shadow: 0 8px 20px rgba(90, 14, 36, 0.08);
+    transform: translateX(4px);
+}
+
+.hq-icon {
+    width: 46px;
+    height: 46px;
+    background-color: #5A0E24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Core Welfare Mini Cards */
+.welfare-mini-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dcc3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+}
+
+.welfare-mini-card:hover {
+    background-color: #f8f5ec;
+    border-color: #E4B028;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(90, 14, 36, 0.1);
+}
+
+/* Section 2: Governance Section */
+.governance-section {
+    background: linear-gradient(180deg, #fdfbf7 0%, #f8f5ec 100%);
+    border-top: 1px solid #eee5cf;
+    border-bottom: 1px solid #eee5cf;
+}
+
+.gov-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dcc3;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s ease;
+}
+
+.gov-card:hover {
+    transform: translateY(-8px);
+    border-color: #E4B028;
+    box-shadow: 0 16px 32px rgba(90, 14, 36, 0.12);
+}
+
+.gov-icon-ring {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #f8f5ec;
+    border: 2px solid #E4B028;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.gov-card:hover .gov-icon-ring {
+    background-color: #5A0E24;
+}
+
+.gov-card:hover .gov-icon-ring i,
+.gov-card:hover .gov-icon-ring span {
+    color: #E4B028 !important;
+}
+
+/* Section 3: History Alternating Timeline */
+.kmt-timeline {
+    padding: 20px 0;
+}
+
+/* Center Vertical Line */
+.kmt-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(180deg, #5A0E24 0%, #E4B028 100%);
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.timeline-row {
+    position: relative;
+    width: 50%;
+    padding: 15px 40px;
+}
+
+.timeline-row.left {
+    left: 0;
+}
+
+.timeline-row.right {
+    left: 50%;
+}
+
+/* Timeline Center Dot */
+.timeline-row::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    width: 20px;
+    height: 20px;
+    background-color: #E4B028;
+    border: 4px solid #5A0E24;
+    border-radius: 50%;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.timeline-row.left::after {
+    right: -10px;
+}
+
+.timeline-row.right::after {
+    left: -10px;
+}
+
+.timeline-row:hover::after {
+    transform: scale(1.3);
+}
+
+.timeline-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dcc3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: #E4B028;
+    box-shadow: 0 14px 28px rgba(90, 14, 36, 0.12);
+}
+
+.timeline-year-badge {
+    background-color: #5A0E24;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Bottom CTA Banner */
+.about-cta-banner {
+    background: linear-gradient(135deg, #5A0E24 0%, #360715 100%);
+    border-bottom: 4px solid #E4B028;
+    box-shadow: 0 15px 35px rgba(90, 14, 36, 0.2);
+}
+
+/* Responsive Adjustments for Mobile & Tablet */
+@media (max-width: 991.98px) {
+    .about-collage-wrapper {
+        padding: 0 0 30px 0;
+    }
+    .collage-main-img {
+        width: 100%;
+        height: 320px;
+    }
+    .kmt-timeline::before {
+        left: 20px;
+    }
+    .timeline-row {
+        width: 100%;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+    .timeline-row.right {
+        left: 0;
+    }
+    .timeline-row.left::after,
+    .timeline-row.right::after {
+        left: 10px;
+        right: auto;
+    }
+}
