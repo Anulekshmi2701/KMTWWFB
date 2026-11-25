@@ -370,21 +370,21 @@ background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0 60px 0;
 }
-
-/*** 10. Carousel hero ***/
+/*** 10. Carousel hero (Left Text + Crisp Right Illustration) ***/
 .carousel-header .carousel-control-prev .carousel-control-prev-icon,
 .carousel-header .carousel-control-next .carousel-control-next-icon {
-    width: 4rem;
-    height: 4rem;
-    margin-left: -60px;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: -40px;
     border-radius: 50%;
-    background-size: 60% 60%;
-    transition: 0.4s var(--ease);
+    background-size: 55% 55%;
+    transition: 0.4s ease;
+    z-index: 5;
 }
 
 .carousel-header .carousel-control-next .carousel-control-next-icon {
     margin-left: 0;
-    margin-right: -60px;
+    margin-right: -40px;
 }
 
 .carousel-header .carousel-control-prev:hover .carousel-control-prev-icon,
@@ -393,76 +393,97 @@ background-repeat: no-repeat;
     box-shadow: 0 0 0 8px rgba(var(--bs-secondary-rgb), .25);
 }
 
-.carousel-header .carousel .carousel-indicators { padding-bottom: 0; }
+.carousel-header .carousel .carousel-indicators {
+    padding-bottom: 10px;
+    z-index: 5;
+}
 
 .carousel-header .carousel .carousel-indicators li {
     width: 8px;
     height: 8px;
-    border: 8px solid var(--bs-primary);
+    border: 6px solid var(--bs-primary);
     border-radius: 50%;
-    margin-right: 30px;
-    transition: 0.4s var(--ease);
+    margin-right: 18px;
+    transition: 0.4s ease;
 }
 
-.carousel-header .carousel .carousel-indicators li.active { border: 8px solid var(--bs-secondary); }
+.carousel-header .carousel .carousel-indicators li.active {
+    border: 6px solid var(--bs-secondary);
+}
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    height: 70vh;                      /* <-- HERO HEIGHT: change this (60vh = shorter, 80vh = taller) */
-    min-height: 460px;
+    height: 72vh;
+    min-height: 480px;
     overflow: hidden;
-    background: #2A0A14;
+    background: #14221a;
 }
 
-
-/* blurred copy of the same image fills the empty sides (set with style="--bg: url(img/xx.png)") */
+/* Remove old blur overlay so image stays 100% sharp */
 .carousel-header .carousel-inner .carousel-item::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: calc(100% + 60px);
-    height: calc(100% + 60px);
-    background: var(--bg) center / cover no-repeat;
-    filter: blur(22px) brightness(.8);
+    display: none !important;
 }
 
-
+/* Keep workers & vehicles positioned cleanly on the right */
 .carousel-header .carousel-inner .carousel-item img {
     display: block;
-    width: 100%;                       /* full width of the section */
+    width: 100%;
     height: 100%;
-    object-fit: cover;                 /* fills the whole section, no side bars */
-    object-position: center 65%;       /* keeps the people in view (0% = show top, 100% = show bottom) */
+    object-fit: cover;
+    object-position: right 65%;
+    filter: none !important;
 }
+
+/* Dark gradient ONLY on the left behind the text; right side stays bright & clear */
 .carousel-header .carousel-inner .carousel-item .carousel-caption {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(0, 0, 0, .5);
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(14, 28, 20, 0.94) 0%,
+        rgba(14, 28, 20, 0.82) 38%,
+        rgba(14, 28, 20, 0.25) 68%,
+        rgba(14, 28, 20, 0.0) 100%
+    );
+}
+
+@media (max-width: 991.98px) {
+    .carousel-header .carousel-inner .carousel-item {
+        height: 500px;
+    }
+    .carousel-header .carousel-inner .carousel-item .carousel-caption {
+        background: rgba(14, 28, 20, 0.78);
+    }
 }
 
 @media (max-width: 768px) {
-    .carousel-header .carousel-inner .carousel-item { height: 460px; }
+    .carousel-header .carousel-inner .carousel-item {
+        height: 460px;
+    }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
     .carousel-header .carousel-control-next .carousel-control-next-icon {
-        width: 3rem;
-        height: 3rem;
+        width: 2.8rem;
+        height: 2.8rem;
     }
 
-    .carousel-header .carousel-control-prev .carousel-control-prev-icon { margin-left: 0; }
-    .carousel-header .carousel-control-next .carousel-control-next-icon { margin-right: 0; }
-
-    .carousel-header .carousel .carousel-indicators { padding: 0; }
+    .carousel-header .carousel-control-prev .carousel-control-prev-icon {
+        margin-left: 0;
+    }
+    .carousel-header .carousel-control-next .carousel-control-next-icon {
+        margin-right: 0;
+    }
 }
-
 
 /*** 11. About ***/
 .about-img-wrap {
