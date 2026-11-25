@@ -1,10 +1,31 @@
-/*** About Us Page Styles (css/about.css) ***/
+/*** About Us Page Styles — Light Green & Dark Yellow Theme (css/about.css) ***/
 
-/* Top Page Header Banner */
+:root {
+    --about-green: #156628;        /* Rich Forest/Light-accent Green */
+    --about-green-bright: #228B3B; /* Fresh Light Green */
+    --about-green-soft: #eef8f0;   /* Soft Mint/Light Green Tint */
+    --about-green-border: #cde5d3; /* Subtle Green Border */
+    --about-dark-yellow: #C89211;  /* Dark Yellow / Ochre Gold */
+    --about-dark-yellow-deep: #9E7006;
+}
+
+/* Override Bootstrap primary/warning inside About sections for consistency */
+.about-overview-section .text-primary,
+.governance-section .text-primary,
+.history-timeline-section .text-primary {
+    color: var(--about-green) !important;
+}
+
+.about-overview-section .text-warning,
+.governance-section .text-warning,
+.history-timeline-section .text-warning {
+    color: var(--about-dark-yellow) !important;
+}
+
 .about-page-header {
-    background: linear-gradient(135deg, rgba(90, 14, 36, 0.94) 0%, rgba(45, 7, 18, 0.96) 100%),
-                url('../img/about-banner-bg.jpg') center/cover no-repeat;
-    border-bottom: 4px solid #E4B028;
+    background: linear-gradient(135deg, rgba(44, 114, 117, 0.88) 0%, rgba(168, 114, 58, 0.86) 55%, rgba(181, 88, 69, 0.88) 100%),
+                url('../img/about1.webp') center/cover no-repeat;
+    border-bottom: 4px solid var(--about-dark-yellow);
 }
 
 /* Multi-Image Collage Layout */
@@ -52,6 +73,7 @@
     width: 150px;
     height: 150px;
     z-index: 3;
+    border-color: var(--about-dark-yellow) !important;
     animation: floatBadge 5s ease-in-out infinite;
 }
 
@@ -66,8 +88,8 @@
     position: absolute;
     left: 20px;
     bottom: 10px;
-    background: linear-gradient(135deg, #5A0E24 0%, #3a0817 100%);
-    border-left: 5px solid #E4B028;
+    background: linear-gradient(135deg, #124D1C 0%, #1F7A33 100%);
+    border-left: 5px solid var(--about-dark-yellow);
     z-index: 4;
     transition: transform 0.35s ease;
 }
@@ -79,8 +101,8 @@
 .badge-icon-box {
     width: 52px;
     height: 52px;
-    background-color: rgba(228, 176, 40, 0.15);
-    border: 1px solid #E4B028;
+    background-color: rgba(200, 146, 17, 0.18);
+    border: 1px solid var(--about-dark-yellow);
 }
 
 @keyframes floatBadge {
@@ -90,21 +112,21 @@
 
 /* Headquarters Box */
 .hq-highlight-box {
-    background-color: #f8f5ec;
-    border: 1px solid #e6dcc3;
-    border-left: 4px solid #5A0E24;
+    background-color: var(--about-green-soft);
+    border: 1px solid var(--about-green-border);
+    border-left: 4px solid var(--about-dark-yellow);
     transition: all 0.3s ease;
 }
 
 .hq-highlight-box:hover {
-    box-shadow: 0 8px 20px rgba(90, 14, 36, 0.08);
+    box-shadow: 0 8px 20px rgba(21, 102, 40, 0.1);
     transform: translateX(4px);
 }
 
 .hq-icon {
     width: 46px;
     height: 46px;
-    background-color: #5A0E24;
+    background-color: var(--about-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,44 +135,53 @@
 /* Core Welfare Mini Cards */
 .welfare-mini-card {
     background-color: #ffffff;
-    border: 1px solid #e6dcc3;
+    border: 1px solid var(--about-green-border);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: all 0.35s ease;
 }
 
 .welfare-mini-card:hover {
-    background-color: #f8f5ec;
-    border-color: #E4B028;
+    background-color: var(--about-green-soft);
+    border-color: var(--about-dark-yellow);
     transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(90, 14, 36, 0.1);
+    box-shadow: 0 12px 24px rgba(21, 102, 40, 0.12);
 }
 
 /* Section 2: Governance Section */
 .governance-section {
-    background: linear-gradient(180deg, #fdfbf7 0%, #f8f5ec 100%);
-    border-top: 1px solid #eee5cf;
-    border-bottom: 1px solid #eee5cf;
+    background: linear-gradient(180deg, #f6fbf7 0%, var(--about-green-soft) 100%);
+    border-top: 1px solid var(--about-green-border);
+    border-bottom: 1px solid var(--about-green-border);
 }
 
 .gov-card {
     background-color: #ffffff;
-    border: 1px solid #e6dcc3;
+    border: 1px solid var(--about-green-border);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     transition: all 0.35s ease;
 }
 
 .gov-card:hover {
     transform: translateY(-8px);
-    border-color: #E4B028;
-    box-shadow: 0 16px 32px rgba(90, 14, 36, 0.12);
+    border-color: var(--about-dark-yellow);
+    box-shadow: 0 16px 32px rgba(21, 102, 40, 0.14);
+}
+
+.gov-card .badge.bg-primary {
+    background-color: var(--about-green) !important;
+}
+
+.gov-card .badge.bg-warning {
+    background-color: var(--about-dark-yellow) !important;
+    color: #ffffff !important;
 }
 
 .gov-icon-ring {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background-color: #f8f5ec;
-    border: 2px solid #E4B028;
+    background-color: var(--about-green-soft);
+    border: 2px solid var(--about-dark-yellow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,12 +189,13 @@
 }
 
 .gov-card:hover .gov-icon-ring {
-    background-color: #5A0E24;
+    background-color: var(--about-green);
+    border-color: var(--about-dark-yellow);
 }
 
 .gov-card:hover .gov-icon-ring i,
 .gov-card:hover .gov-icon-ring span {
-    color: #E4B028 !important;
+    color: #ffd56b !important;
 }
 
 /* Section 3: History Alternating Timeline */
@@ -171,7 +203,7 @@
     padding: 20px 0;
 }
 
-/* Center Vertical Line */
+/* Center Vertical Line (Light Green to Dark Yellow) */
 .kmt-timeline::before {
     content: "";
     position: absolute;
@@ -179,7 +211,7 @@
     bottom: 0;
     left: 50%;
     width: 4px;
-    background: linear-gradient(180deg, #5A0E24 0%, #E4B028 100%);
+    background: linear-gradient(180deg, var(--about-green-bright) 0%, var(--about-dark-yellow) 100%);
     transform: translateX(-50%);
     border-radius: 4px;
 }
@@ -205,8 +237,8 @@
     top: 32px;
     width: 20px;
     height: 20px;
-    background-color: #E4B028;
-    border: 4px solid #5A0E24;
+    background-color: var(--about-dark-yellow);
+    border: 4px solid var(--about-green);
     border-radius: 50%;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -226,19 +258,20 @@
 
 .timeline-card {
     background-color: #ffffff;
-    border: 1px solid #e6dcc3;
+    border: 1px solid var(--about-green-border);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.35s ease;
 }
 
 .timeline-card:hover {
     transform: translateY(-5px);
-    border-color: #E4B028;
-    box-shadow: 0 14px 28px rgba(90, 14, 36, 0.12);
+    border-color: var(--about-dark-yellow);
+    background-color: #fcfffd;
+    box-shadow: 0 14px 28px rgba(21, 102, 40, 0.12);
 }
 
 .timeline-year-badge {
-    background-color: #5A0E24;
+    background-color: var(--about-green);
     color: #ffffff;
     font-size: 12px;
     font-weight: 700;
@@ -247,11 +280,30 @@
     letter-spacing: 0.5px;
 }
 
+.timeline-year-badge.bg-warning {
+    background-color: var(--about-dark-yellow) !important;
+    color: #ffffff !important;
+}
+
 /* Bottom CTA Banner */
 .about-cta-banner {
-    background: linear-gradient(135deg, #5A0E24 0%, #360715 100%);
-    border-bottom: 4px solid #E4B028;
-    box-shadow: 0 15px 35px rgba(90, 14, 36, 0.2);
+    background: linear-gradient(135deg, #124D1C 0%, #1E7A32 100%);
+    border-bottom: 4px solid var(--about-dark-yellow);
+    box-shadow: 0 15px 35px rgba(18, 77, 28, 0.22);
+}
+
+.about-cta-banner .btn-warning {
+    background-color: var(--about-dark-yellow) !important;
+    border-color: var(--about-dark-yellow) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.about-cta-banner .btn-warning:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #124D1C !important;
+    transform: translateY(-2px);
 }
 
 /* Responsive Adjustments for Mobile & Tablet */
@@ -279,4 +331,261 @@
         left: 10px;
         right: auto;
     }
+}
+/* Top-Right Floating Welfare Icon Card */
+.welfare-float-icon.top-card {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    z-index: 3;
+    border: 1px solid #cde5d3;
+    border-left: 4px solid #C89211;
+    animation: floatBadge 5s ease-in-out infinite;
+}
+
+.wf-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Bottom-Right Welfare Icon Grid Panel (Replaces secondary image) */
+.welfare-float-panel {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 245px;
+    z-index: 3;
+    border: 1px solid #cde5d3;
+    border-bottom: 4px solid #C89211;
+    transition: transform 0.35s ease;
+}
+
+.welfare-float-panel:hover {
+    transform: translateY(-6px);
+}
+/*** About Overview Section Only (Light Green & Dark Yellow Theme) ***/
+:root {
+    --about-green: #156628;
+    --about-green-soft: #eef8f0;
+    --about-green-border: #cde5d3;
+    --about-dark-yellow: #C89211;
+}
+
+.about-overview-section .text-primary {
+    color: var(--about-green) !important;
+}
+
+.about-overview-section .text-warning {
+    color: var(--about-dark-yellow) !important;
+}
+
+/* Main Image & Floating Badge Wrapper */
+.about-collage-wrapper {
+    padding: 20px 30px 45px 0;
+}
+
+.collage-main-img {
+    width: 88%;
+    height: 410px;
+    border: 4px solid #ffffff;
+    transition: transform 0.5s ease;
+}
+
+.collage-main-img img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.collage-main-img:hover img {
+    transform: scale(1.06);
+}
+
+/* Single Floating Icon Card (Bottom-Right) */
+.single-welfare-icon-card {
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    width: 145px;
+    height: 145px;
+    z-index: 3;
+    border: 2px solid var(--about-green-border);
+    border-bottom: 4px solid var(--about-dark-yellow);
+    animation: floatBadge 5s ease-in-out infinite;
+    transition: transform 0.35s ease;
+}
+
+.single-welfare-icon-card:hover {
+    transform: translateY(-6px) scale(1.04);
+}
+
+.icon-emblem-ring {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #eef8f0 0%, #fdf8eb 100%);
+    border: 2px dashed var(--about-dark-yellow);
+}
+
+/* Floating 40+ Years Badge (Bottom-Left) */
+.collage-badge-card {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    background: linear-gradient(135deg, #124D1C 0%, #1F7A33 100%);
+    border-left: 5px solid var(--about-dark-yellow);
+    z-index: 4;
+    transition: transform 0.35s ease;
+}
+
+.collage-badge-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-icon-box {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(200, 146, 17, 0.18);
+    border: 1px solid var(--about-dark-yellow);
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Headquarters & Statewide Structure Box */
+.hq-highlight-box {
+    background-color: var(--about-green-soft);
+    border: 1px solid var(--about-green-border);
+    border-left: 4px solid var(--about-dark-yellow);
+    transition: all 0.3s ease;
+}
+
+.hq-highlight-box:hover {
+    box-shadow: 0 8px 20px rgba(21, 102, 40, 0.1);
+    transform: translateX(4px);
+}
+
+.hq-icon {
+    width: 46px;
+    height: 46px;
+    background-color: var(--about-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Core Welfare Mini Cards */
+.welfare-mini-card {
+    background-color: #ffffff;
+    border: 1px solid var(--about-green-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+}
+
+.welfare-mini-card:hover {
+    background-color: var(--about-green-soft);
+    border-color: var(--about-dark-yellow);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(21, 102, 40, 0.12);
+}
+
+/* Responsive Adjustment for Mobile & Tablet */
+@media (max-width: 991.98px) {
+    .about-collage-wrapper {
+        padding: 0 0 30px 0;
+    }
+    .collage-main-img {
+        width: 100%;
+        height: 320px;
+    }
+}
+/*** Board Members & District Directory Section (Light Green & Dark Yellow Theme) ***/
+.board-members-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f6fbf7 100%);
+    border-top: 1px solid #cde5d3;
+}
+
+.member-profile-card {
+    background-color: #ffffff;
+    border: 1px solid #cde5d3;
+    border-bottom: 4px solid #124D1C;
+    box-shadow: 0 6px 18px rgba(18, 77, 28, 0.06);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.member-profile-card:hover {
+    transform: translateY(-8px);
+    border-color: #C89211;
+    border-bottom-color: #C89211;
+    box-shadow: 0 16px 32px rgba(18, 77, 28, 0.14);
+}
+
+/* Portrait Container (No Black Overlay, Crisp Natural Photo) */
+.member-photo-wrap {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #eef8f0;
+    overflow: hidden;
+}
+
+.member-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    transition: transform 0.5s ease;
+}
+
+.member-profile-card:hover .member-photo-wrap img {
+    transform: scale(1.06);
+}
+
+/* Floating District Pill Badge on Photo */
+.district-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(18, 77, 28, 0.92);
+    color: #ffd66b;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid #C89211;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Card Text Area */
+.member-info-body {
+    background-color: #ffffff;
+    transition: background-color 0.35s ease;
+}
+
+.member-profile-card:hover .member-info-body {
+    background-color: #eef8f0;
+}
+
+.member-name {
+    color: #124D1C;
+    font-size: 1rem;
+}
+
+.member-role {
+    color: #9E7006;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.member-dist-text {
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 500;
 }

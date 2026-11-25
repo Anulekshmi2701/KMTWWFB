@@ -1361,3 +1361,93 @@ background-repeat: no-repeat;
     margin-left: -30px;
     border-radius: 10px;
 }
+.leader-split-card {
+    border: 1px solid #e6dcc3;
+    border-left: 5px solid #5A0E24;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 100%;
+}
+.leader-split-card:hover {
+    transform: translateY(-6px);
+    border-left-color: #E4B028;
+    box-shadow: 0 15px 30px rgba(90, 14, 36, 0.12) !important;
+}
+.leader-split-card .split-photo {
+    width: 155px;
+    height: 190px;
+    object-fit: cover;
+    object-position: center 15%;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+}
+.leader-split-card:hover .split-photo { transform: scale(1.06); }
+/*** Compact Important Government Portals Section ***/
+.external-portals-section {
+    background: linear-gradient(180deg, #fdfbf7 0%, #eef8f0 100%);
+    border-top: 1px solid #cde5d3;
+    border-bottom: 3px solid #C89211;
+}
+
+.portal-link-card {
+    background-color: #ffffff;
+    border: 1px solid #cde5d3;
+    border-bottom: 3px solid #124D1C;
+    box-shadow: 0 4px 12px rgba(18, 77, 28, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.portal-link-card:hover {
+    transform: translateY(-5px);
+    border-color: #C89211;
+    border-bottom-color: #C89211;
+    box-shadow: 0 10px 20px rgba(18, 77, 28, 0.12);
+}
+
+/* Smaller Circular Icon Container (50px instead of 74px) */
+.portal-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eef8f0;
+    color: #124D1C;
+    border: 1.5px dashed #C89211;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.portal-link-card:hover .portal-icon-box {
+    background-color: #124D1C;
+    color: #ffd66b;
+    border-style: solid;
+    transform: scale(1.06) rotate(5deg);
+}
+
+.portal-title {
+    color: #124D1C;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.portal-link-card:hover .portal-title {
+    color: #5A0E24;
+}
+
+/* Compact Bottom Pill Tag */
+.portal-visit-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #156628;
+    background-color: #eef8f0;
+    padding: 4px 14px;
+    border-radius: 50px;
+    border: 1px solid #cde5d3;
+    transition: all 0.3s ease;
+}
+
+.portal-link-card:hover .portal-visit-tag {
+    background-color: #C89211;
+    color: #ffffff;
+    border-color: #C89211;
+}

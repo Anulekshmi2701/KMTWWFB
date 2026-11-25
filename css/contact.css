@@ -1,0 +1,147 @@
+/*** Contact Us Page Styles — Large GIF & Reduced Whitespace (css/contact.css) ***/
+
+:root {
+    --cnt-green: #156628;
+    --cnt-green-dark: #124D1C;
+    --cnt-green-soft: #eef8f0;
+    --cnt-green-border: #cde5d3;
+    --cnt-gold: #C89211;
+}
+
+/* Main "CONTACT US" Heading */
+.contact-main-heading {
+    color: var(--cnt-green);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Compact Soft Tinted Input Fields */
+.contact-soft-input {
+    background-color: #eef8f0 !important;
+    border: 1.5px solid transparent !important;
+    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    font-size: 0.92rem;
+    color: #1e293b !important;
+    transition: all 0.3s ease;
+}
+
+.contact-soft-input::placeholder {
+    color: #6b947a;
+}
+
+.contact-soft-input:focus {
+    background-color: #ffffff !important;
+    border-color: var(--cnt-gold) !important;
+    box-shadow: 0 6px 18px rgba(21, 102, 40, 0.1) !important;
+}
+
+/* SEND Button */
+.btn-contact-send {
+    background-color: var(--cnt-green);
+    color: #ffffff !important;
+    border: 2px solid var(--cnt-green);
+    letter-spacing: 0.8px;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-contact-send:hover {
+    background-color: var(--cnt-gold);
+    border-color: var(--cnt-gold);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 146, 17, 0.3) !important;
+}
+
+/* --- Right Column: Large Full-Scale GIF Stage --- */
+.helpdesk-illustration-stage {
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-gif-container {
+    width: 100%;
+    padding: 0;
+}
+
+.contact-hero-gif {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+/* --- Section 2: Quick Contact Info Cards --- */
+.contact-info-strip {
+    background: linear-gradient(180deg, #f6fbf7 0%, var(--cnt-green-soft) 100%);
+    border-top: 1px solid var(--cnt-green-border);
+    border-bottom: 1px solid var(--cnt-green-border);
+}
+
+.info-pill-card {
+    background-color: #ffffff;
+    border: 1px solid var(--cnt-green-border);
+    border-bottom: 4px solid var(--cnt-green-dark);
+    box-shadow: 0 4px 14px rgba(18, 77, 28, 0.05);
+    transition: all 0.35s ease;
+}
+
+.info-pill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cnt-gold);
+    border-bottom-color: var(--cnt-gold);
+    box-shadow: 0 12px 24px rgba(18, 77, 28, 0.12);
+}
+
+.info-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--cnt-green-soft);
+    color: var(--cnt-green-dark);
+    border: 2px dashed var(--cnt-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.info-pill-card:hover .info-icon-circle {
+    background-color: var(--cnt-green-dark);
+    color: #ffd66b;
+    border-style: solid;
+}
+
+/* --- Section 3: District Offices Box --- */
+.district-box {
+    background-color: #fdfbf7;
+    border: 1px solid var(--cnt-green-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.dist-chip {
+    background-color: #ffffff;
+    border: 1px solid var(--cnt-green-border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #124D1C;
+    transition: all 0.25s ease;
+}
+
+.dist-chip:hover {
+    background-color: var(--cnt-green-soft);
+    border-color: var(--cnt-gold);
+    transform: translateX(3px);
+}

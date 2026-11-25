@@ -1,0 +1,235 @@
+/*** Modern Gallery Page Styles — Light Green & Dark Yellow Theme (css/gallery.css) ***/
+
+:root {
+    --gal-green: #156628;
+    --gal-green-dark: #124D1C;
+    --gal-green-soft: #eef8f0;
+    --gal-green-border: #cde5d3;
+    --gal-gold: #C89211;
+}
+
+/* Top Header Banner */
+.gallery-page-header {
+    background: linear-gradient(135deg, rgba(18, 77, 28, 0.92) 0%, rgba(28, 107, 45, 0.88) 60%, rgba(168, 114, 28, 0.88) 100%),
+                url('../img/about1.webp') center/cover no-repeat;
+    border-bottom: 4px solid var(--gal-gold);
+}
+
+/* --- Section 1: Scrollable & Movable Horizontal Track --- */
+.scrollable-gallery-section {
+    background-color: #fdfbf7;
+    border-bottom: 1px solid var(--gal-green-border);
+}
+
+.scroll-nav-btn {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    color: var(--gal-green-dark);
+    border: 1.5px solid var(--gal-gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.scroll-nav-btn:hover {
+    background-color: var(--gal-green-dark);
+    color: #ffd66b;
+    transform: scale(1.08);
+}
+
+.movable-gallery-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 4px 20px 4px;
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gal-gold) var(--gal-green-soft);
+}
+
+.movable-gallery-track.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.movable-gallery-track::-webkit-scrollbar {
+    height: 7px;
+}
+
+.movable-gallery-track::-webkit-scrollbar-track {
+    background: var(--gal-green-soft);
+    border-radius: 10px;
+}
+
+.movable-gallery-track::-webkit-scrollbar-thumb {
+    background: var(--gal-gold);
+    border-radius: 10px;
+}
+
+.movable-slide-card {
+    flex: 0 0 340px;
+    height: 250px;
+    position: relative;
+    scroll-snap-align: start;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 22px rgba(18, 77, 28, 0.1);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    user-select: none;
+}
+
+.movable-slide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(18, 77, 28, 0.18);
+    border-color: var(--gal-gold);
+}
+
+.movable-slide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: transform 0.6s ease;
+}
+
+.movable-slide-card:hover img {
+    transform: scale(1.08);
+}
+
+.movable-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(18, 77, 28, 0.92) 0%, rgba(0, 0, 0, 0.25) 55%, transparent 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* --- Section 2: Filter Pills & Staggered Mosaic Grid --- */
+.modern-mosaic-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f6fbf7 100%);
+}
+
+.gallery-filter-btn {
+    background-color: #ffffff;
+    color: var(--gal-green-dark);
+    border: 1.5px solid var(--gal-green-border);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.gallery-filter-btn:hover:not(.active) {
+    background-color: var(--gal-green-soft);
+    border-color: var(--gal-gold);
+}
+
+.gallery-filter-btn.active {
+    background-color: var(--gal-green-dark);
+    color: #ffd66b;
+    border-color: var(--gal-green-dark);
+    box-shadow: 0 6px 15px rgba(18, 77, 28, 0.2);
+}
+
+/* CSS Grid Mosaic Layout (Mixed Sizes that auto-pack with zero gaps) */
+.mosaic-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 230px;
+    grid-auto-flow: dense;
+    gap: 18px;
+}
+
+.mosaic-item.span-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.mosaic-item.span-2x1 {
+    grid-column: span 2;
+}
+
+.mosaic-item.span-1x2 {
+    grid-row: span 2;
+}
+
+.mosaic-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid var(--gal-green-border);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mosaic-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gal-gold);
+    box-shadow: 0 16px 32px rgba(18, 77, 28, 0.16);
+}
+
+.mosaic-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mosaic-card:hover img {
+    transform: scale(1.09);
+}
+
+/* Smooth Slide-Up Hover Caption */
+.mosaic-hover-info {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(18, 77, 28, 0.94) 0%, rgba(18, 77, 28, 0.45) 55%, transparent 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.mosaic-card:hover .mosaic-hover-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeScaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991.98px) {
+    .mosaic-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .movable-slide-card {
+        flex: 0 0 280px;
+        height: 210px;
+    }
+    .mosaic-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 230px;
+    }
+    .mosaic-item.span-2x2,
+    .mosaic-item.span-2x1,
+    .mosaic-item.span-1x2 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

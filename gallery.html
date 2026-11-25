@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery - KMTWWFB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template & Custom Gallery Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block" style="background-color: #5A0E24;">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                <div class="d-flex">
+                    <a href="mailto:motor.worker@gmail.com" class="me-4" style="color: #FAF3E1;"><i class="fas fa-envelope me-2" style="color: #E4B028;"></i>motor.worker@gmail.com</a>
+                    <a href="tel:04742742818" class="me-0" style="color: #FAF3E1;"><i class="fas fa-phone-alt me-2" style="color: #E4B028;"></i>0474-2742818</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center social-icons" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="display-8 m-0" style="color: #124D1C;"><img src="img/logo.png" class="img-fluid" alt="KMTWWFB logo">KMTWWFB</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                 
+                    <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
+                        <div class="dropdown-menu m-0">
+                            <a href="feature.html" class="dropdown-item">Feature</a>
+                            <a href="#" class="dropdown-item">Testimonial</a>
+                            <a href="#" class="dropdown-item">Training</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn btn-md-square mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal" style="background-color: #124D1C; color: #E4B028;"><i class="fas fa-search"></i></button>
+                <a href="" class="btn rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="background-color: #124D1C; color: #FFFFFF;">ADMIN LOGIN</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Banner Start -->
+    <div class="container-fluid gallery-page-header py-5 mb-5">
+        <div class="container py-4 text-center">
+            <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold wow fadeInDown" data-wow-delay="0.1s" style="background-color: rgba(200, 146, 17, 0.22); color: #ffd66b; border: 1px solid #C89211;">
+                <i class="fas fa-camera-retro me-1"></i> MOMENTS, EVENTS &amp; WELFARE INITIATIVES
+            </span>
+            <h1 class="display-4 text-white fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">KMTWWFB Media Gallery</h1>
+            <p class="text-white-50 mx-auto mb-4 wow fadeInUp" data-wow-delay="0.3s" style="max-width: 720px;">
+                Explore highlights from state-level welfare distribution drives, Ruby Jubilee Educational Scholarship awards, district adalats, and digital awareness campaigns.
+            </p>
+            <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay="0.4s">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Photo Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header Banner End -->
+
+    <!-- Section 1: Scrollable & Movable Featured Events Strip -->
+    <section class="scrollable-gallery-section py-4">
+        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+            
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div>
+                    <span class="text-uppercase fw-bold d-block mb-1" style="color: #156628; letter-spacing: 1.5px; font-size: 12px;">
+                        <i class="fas fa-arrows-alt-h text-warning me-1"></i> DRAG OR SCROLL HORIZONTALLY
+                    </span>
+                    <h2 class="fw-bold mb-0" style="color: #124D1C;">Featured Event Highlights</h2>
+                </div>
+                <!-- Manual Scroll Arrow Controls -->
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="btn scroll-nav-btn rounded-circle" id="scrollLeftBtn" aria-label="Scroll Left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="btn scroll-nav-btn rounded-circle" id="scrollRightBtn" aria-label="Scroll Right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horizontal Movable Track (Supports Touch, Mouse Drag & Arrow Buttons) -->
+            <div class="movable-track-wrapper wow fadeInUp" data-wow-delay="0.2s">
+                <div class="movable-gallery-track" id="movableTrack">
+                    
+                    <!-- Slide Card 1 -->
+                    <div class="movable-slide-card rounded-4 overflow-hidden" data-title="Ruby Jubilee Educational Scholarship Distribution" data-date="2026" data-img="img/gallery/event-1.jpg">
+                        <img src="img/gallery/event-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80'" alt="Ruby Jubilee Scholarship">
+                        <div class="movable-overlay">
+                            <span class="badge bg-warning text-dark rounded-pill mb-2">Featured Event</span>
+                            <h5 class="text-white fw-bold mb-1">Ruby Jubilee Educational Awards</h5>
+                            <small class="text-white-50">Honoring meritorious children of transport workers</small>
+                        </div>
+                    </div>
+
+                    <!-- Slide Card 2 -->
+                    <div class="movable-slide-card rounded-4 overflow-hidden" data-title="Statewide Welfare Fund Adalat & Pension Camp" data-date="2026" data-img="img/gallery/event-2.jpg">
+                        <img src="img/gallery/event-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80'" alt="Welfare Fund Adalat">
+                        <div class="movable-overlay">
+                            <span class="badge bg-success rounded-pill mb-2">District Adalat</span>
+                            <h5 class="text-white fw-bold mb-1">Statewide Welfare Fund Adalat</h5>
+                            <small class="text-white-50">On-the-spot claim settlement across 14 districts</small>
+                        </div>
+                    </div>
+
+                    <!-- Slide Card 3 -->
+                    <div class="movable-slide-card rounded-4 overflow-hidden" data-title="Digital Portal & Online Payment Awareness" data-date="2026" data-img="img/gallery/event-3.jpg">
+                        <img src="img/gallery/event-3.jpg" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'" alt="Digital Awareness">
+                        <div class="movable-overlay">
+                            <span class="badge bg-warning text-dark rounded-pill mb-2">e-Governance</span>
+                            <h5 class="text-white fw-bold mb-1">Digital Portal &amp; e-Payment Drive</h5>
+                            <small class="text-white-50">Empowering self-employed drivers with online services</small>
+                        </div>
+                    </div>
+
+                    <!-- Slide Card 4 -->
+                    <div class="movable-slide-card rounded-4 overflow-hidden" data-title="Kollam Head Office Administrative Meet" data-date="2026" data-img="img/gallery/event-4.jpg">
+                        <img src="img/gallery/event-4.jpg" onerror="this.src='https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=800&q=80'" alt="Board Meeting">
+                        <div class="movable-overlay">
+                            <span class="badge bg-success rounded-pill mb-2">Administration</span>
+                            <h5 class="text-white fw-bold mb-1">Tripartite Board Review Meeting</h5>
+                            <small class="text-white-50">Kollam Head Office &amp; District Executive Officers</small>
+                        </div>
+                    </div>
+
+                    <!-- Slide Card 5 -->
+                    <div class="movable-slide-card rounded-4 overflow-hidden" data-title="Medical & Financial Aid Distribution" data-date="2026" data-img="img/gallery/event-5.jpg">
+                        <img src="img/gallery/event-5.jpg" onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80'" alt="Medical Aid">
+                        <div class="movable-overlay">
+                            <span class="badge bg-warning text-dark rounded-pill mb-2">Social Security</span>
+                            <h5 class="text-white fw-bold mb-1">Medical &amp; Marriage Assistance</h5>
+                            <small class="text-white-50">Direct Benefit Transfer (DBT) welfare support</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 2: Modern Staggered Mosaic Gallery (Messy-to-Neat Responsive Grid) -->
+    <section class="modern-mosaic-section py-5">
+        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+            
+            <!-- Title & Interactive Category Filter Pills -->
+            <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 780px;">
+                <span class="badge rounded-pill px-3 py-2 mb-2 fw-bold" style="background-color: #eef8f0; color: #156628; border: 1px solid #C89211;">
+                    <i class="fas fa-th text-warning me-1"></i> PHOTO ARCHIVE
+                </span>
+                <h2 class="display-6 fw-bold mb-3" style="color: #124D1C;">KMTWWFB Gallery Showcase</h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <button class="btn gallery-filter-btn active rounded-pill px-4 py-2 fw-bold" data-filter="all">All Photos</button>
+                <button class="btn gallery-filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="events">Events &amp; Awards</button>
+                <button class="btn gallery-filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="welfare">Welfare Drives</button>
+                <button class="btn gallery-filter-btn rounded-pill px-4 py-2 fw-bold" data-filter="offices">Offices &amp; Transport</button>
+            </div>
+
+            <!-- Balanced Staggered Mosaic Grid (Mixed Tall, Wide & Standard Cards that lock together cleanly) -->
+            <div class="mosaic-gallery-grid" id="mosaicGrid">
+
+                <!-- Item 1: Large Featured (2x2) -->
+                <div class="mosaic-item span-2x2 wow zoomIn" data-category="events" data-wow-delay="0.1s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80'" alt="State Transport Convention">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-warning text-dark mb-2">Events &amp; Awards</span>
+                            <h5 class="text-white fw-bold mb-1">State-Level Transport Workers Convention</h5>
+                            <p class="text-white-50 small mb-2">Inaugural ceremony &amp; welfare scheme launch</p>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View Full Photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Standard -->
+                <div class="mosaic-item wow fadeInUp" data-category="welfare" data-wow-delay="0.2s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=700&q=80'" alt="Goods Transport Workers">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-success mb-2">Welfare Drives</span>
+                            <h6 class="text-white fw-bold mb-2">Goods &amp; Heavy Vehicle Worker Enrollment</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Tall Portrait (1x2) -->
+                <div class="mosaic-item span-1x2 wow fadeInUp" data-category="events" data-wow-delay="0.3s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-3.jpg" onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80'" alt="Scholarship Award">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-warning text-dark mb-2">Events &amp; Awards</span>
+                            <h6 class="text-white fw-bold mb-2">Ruby Jubilee Scholarship Ceremony</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Standard -->
+                <div class="mosaic-item wow fadeInUp" data-category="offices" data-wow-delay="0.2s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-4.jpg" onerror="this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=700&q=80'" alt="Public Transport Fleet">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-primary mb-2">Offices &amp; Transport</span>
+                            <h6 class="text-white fw-bold mb-2">Private Stage Carriage Registration</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Wide Banner (2x1) -->
+                <div class="mosaic-item span-2x1 wow fadeInUp" data-category="welfare" data-wow-delay="0.3s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-5.jpg" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80'" alt="District Adalat">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-success mb-2">Welfare Drives</span>
+                            <h6 class="text-white fw-bold mb-2">District Executive Office Helpdesk &amp; Adalat</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View Full Photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Standard -->
+                <div class="mosaic-item wow fadeInUp" data-category="offices" data-wow-delay="0.4s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-6.jpg" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80'" alt="IT Cell Portal">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-primary mb-2">Offices &amp; Transport</span>
+                            <h6 class="text-white fw-bold mb-2">KMTWWFB Digital Services &amp; e-Payment</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: Standard -->
+                <div class="mosaic-item wow fadeInUp" data-category="welfare" data-wow-delay="0.4s">
+                    <div class="mosaic-card rounded-4 overflow-hidden">
+                        <img src="img/gallery/gal-7.jpg" onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=700&q=80'" alt="Pension & Medical Support">
+                        <div class="mosaic-hover-info">
+                            <span class="badge bg-success mb-2">Welfare Drives</span>
+                            <h6 class="text-white fw-bold mb-2">Pension &amp; Medical Aid Handover</h6>
+                            <button class="btn btn-sm btn-light rounded-pill px-3 fw-bold view-lightbox-btn">
+                                <i class="fas fa-expand-alt me-1"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Full-Screen Lightbox Preview Modal -->
+    <div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-dark border-0 rounded-4 overflow-hidden shadow-lg">
+                <div class="modal-header border-bottom border-secondary py-2 px-4">
+                    <h6 class="modal-title text-white fw-bold mb-0" id="lightboxTitle">Event Photo</h6>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 text-center bg-black position-relative">
+                    <img src="" id="lightboxImg" class="img-fluid" style="max-height: 78vh; object-fit: contain;" alt="Full Preview">
+                    <button type="button" class="btn btn-warning rounded-circle position-absolute top-50 start-0 translate-middle-y ms-3 shadow" id="lightboxPrev" style="width: 44px; height: 44px;">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning rounded-circle position-absolute top-50 end-0 translate-middle-y me-3 shadow" id="lightboxNext" style="width: 44px; height: 44px;">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Contact Us</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Office of the Chief Executive Officer, KMTWWFB, Jayam Building, MWRA, Mundakkal West, Kollam-691001</a>
+                        <a href="tel:04742742818"><i class="fas fa-phone me-2"></i> 0474-2742818</a>
+                        <a href="tel:04742741288"><i class="fas fa-phone me-2"></i> 0474-2741288</a>
+                        <a href="mailto:motor.worker@gmail.com"><i class="fas fa-envelope me-2"></i> motor.worker@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Useful Links</h4>
+                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About us</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="gallery.html"><i class="fas fa-angle-right me-2"></i> Gallery</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/onlineservice/employerLogin"><i class="fas fa-angle-right me-2"></i> Employer Login</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/login"><i class="fas fa-angle-right me-2"></i> Official Login</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Policies</h4>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/privacypolicy"><i class="fas fa-angle-right me-2"></i> Privacy policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/refundpolicy"><i class="fas fa-angle-right me-2"></i> Refund policy</a>
+                        <a href="https://kmtwwfb.kerala.gov.in/index.php/termsandcondition"><i class="fas fa-angle-right me-2"></i> Terms and Condition</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Feedback</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Feedback</h4>
+                        <form id="feedbackForm" action="submit_feedback.php" method="post">
+                            <div class="star-rating mb-3">
+                                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Very poor"><i class="fas fa-star"></i></label>
+                            </div>
+                            <input type="text" name="name" class="form-control border-0 mb-3 py-2" placeholder="Your name" required>
+                            <textarea name="message" class="form-control border-0 mb-3" rows="3" placeholder="Your feedback" required></textarea>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Submit</button>
+                            <p id="feedbackMsg" class="text-white mt-2 mb-0" style="display:none;">Thank you for your feedback!</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>KMTWWFB</a>, All rights reserved. Copyright IT CELL.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    Designed By <a class="border-bottom text-white">KMTWWFB IT CELL</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Gallery Interactive Script (Scrollable Track, Category Filter & Lightbox) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Horizontal Scrollable / Movable Track (Drag + Buttons)
+            const track = document.getElementById('movableTrack');
+            const leftBtn = document.getElementById('scrollLeftBtn');
+            const rightBtn = document.getElementById('scrollRightBtn');
+
+            if (leftBtn && rightBtn && track) {
+                leftBtn.addEventListener('click', () => track.scrollBy({ left: -360, behavior: 'smooth' }));
+                rightBtn.addEventListener('click', () => track.scrollBy({ left: 360, behavior: 'smooth' }));
+
+                let isDown = false, startX, scrollLeft;
+                track.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    track.classList.add('dragging');
+                    startX = e.pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                });
+                track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
+                track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
+                track.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - track.offsetLeft;
+                    const walk = (x - startX) * 1.6;
+                    track.scrollLeft = scrollLeft - walk;
+                });
+            }
+
+            // 2. Category Filter for Mosaic Grid
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const mosaicItems = document.querySelectorAll('.mosaic-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const filter = this.getAttribute('data-filter');
+
+                    mosaicItems.forEach(item => {
+                        const cat = item.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeScaleIn 0.45s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 3. Lightbox Modal Preview with Next/Prev
+            const lightboxModal = new bootstrap.Modal(document.getElementById('galleryLightboxModal'));
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            let currentImages = [];
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = currentImages[currentIndex].src;
+                lightboxTitle.textContent = currentImages[currentIndex].title;
+                lightboxModal.show();
+            }
+
+            document.querySelectorAll('.mosaic-card, .movable-slide-card').forEach((card, idx) => {
+                card.addEventListener('click', function () {
+                    const allCards = Array.from(document.querySelectorAll('.mosaic-card, .movable-slide-card'));
+                    currentImages = allCards.map(c => ({
+                        src: c.querySelector('img').src,
+                        title: c.querySelector('h5, h6') ? c.querySelector('h5, h6').textContent : 'KMTWWFB Gallery'
+                    }));
+                    openLightbox(allCards.indexOf(this));
+                });
+            });
+
+            document.getElementById('lightboxPrev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+                lightboxImg.src = currentImages[currentIndex].src;
+                lightboxTitle.textContent = currentImages[currentIndex].title;
+            });
+
+            document.getElementById('lightboxNext').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % currentImages.length;
+                lightboxImg.src = currentImages[currentIndex].src;
+                lightboxTitle.textContent = currentImages[currentIndex].title;
+            });
+        });
+    </script>
+</body>
+</html>

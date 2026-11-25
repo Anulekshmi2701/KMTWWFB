@@ -72,8 +72,8 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link active">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <div class="nav-item dropdown">
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
                         <div class="dropdown-menu m-0">
                             <a href="feature.html" class="dropdown-item">Feature</a>
@@ -82,7 +82,7 @@
                             <a href="#" class="dropdown-item">Training</a>
                             <a href="#" class="dropdown-item">404 Page</a>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <button class="btn btn-md-square mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal" style="background-color: #124D1C; color: #E4B028;"><i class="fas fa-search"></i></button>
@@ -95,9 +95,9 @@
     <!-- Page Header Banner Start -->
     <div class="container-fluid about-page-header py-5 mb-5">
         <div class="container py-4 text-center">
-            <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold wow fadeInDown" data-wow-delay="0.1s" style="background-color: rgba(228, 176, 40, 0.2); color: #E4B028; border: 1px solid #E4B028;">
+            <!-- <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold wow fadeInDown" data-wow-delay="0.1s" style="background-color: rgba(228, 176, 40, 0.2); color: #E4B028; border: 1px solid #E4B028;">
                 <i class="fas fa-landmark me-1"></i> DEPARTMENT OF LABOUR AND SKILLS, GOVT. OF KERALA
-            </span>
+            </span> -->
             <h1 class="display-4 text-white fw-bold mb-3 wow fadeInUp" data-wow-delay="0.2s">About KMTWWFB</h1>
             <p class="text-white-50 mx-auto mb-4 wow fadeInUp" data-wow-delay="0.3s" style="max-width: 720px;">
                 Securing the dignity, financial stability, and social welfare of Kerala’s private motor transport workforce since 1985.
@@ -111,171 +111,151 @@
         </div>
     </div>
     <!-- Page Header Banner End -->
+<!-- Section 1: About The Board (Main Image + Single Floating Icon Card + Overview) -->
+<section class="about-overview-section py-4 py-lg-5">
+    <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+        <div class="row g-5 align-items-center">
+            
+            <!-- Left Column: Main Image + Single Floating Icon Card -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-collage-wrapper position-relative">
+                    
+                    <!-- Main Primary Image -->
+                    <div class="collage-main-img rounded-4 overflow-hidden shadow-lg">
+                        <img src="img/about.webp" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80'" alt="Kerala Motor Transport" class="img-fluid w-100">
+                    </div>
 
-    <!-- Section 1: About The Board (Multi-Image Collage + Overview) -->
-    <section class="about-overview-section py-4 py-lg-5">
-        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
-            <div class="row g-5 align-items-center">
-                
-                <!-- Left Column: Multi-Image Collage with Floating Badge -->
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="about-collage-wrapper position-relative">
-                        <!-- Main Primary Image -->
-                        <div class="collage-main-img rounded-4 overflow-hidden shadow-lg">
-                            <img src="img/about-main.jpg" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80'" alt="Kerala Motor Transport" class="img-fluid w-100">
-                        </div>
-
-                        <!-- Secondary Overlapping Image 1 (Bottom Right) -->
-                        <div class="collage-sub-img rounded-4 overflow-hidden shadow-lg border border-4 border-white d-none d-sm-block wow zoomIn" data-wow-delay="0.4s">
-                            <img src="img/about-sub1.jpg" onerror="this.src='https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80'" alt="Transport Workers" class="img-fluid w-100 h-100 object-fit-cover">
-                        </div>
-
-                        <!-- Secondary Overlapping Image 2 (Top Right Illustration) -->
-                        <div class="collage-top-img rounded-4 overflow-hidden shadow bg-white p-2 border border-2 border-warning d-none d-md-block wow fadeInDown" data-wow-delay="0.5s">
-                            <img src="img/2.gif" onerror="this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=400&q=80'" alt="KMTWWFB Network" class="img-fluid rounded-3">
-                        </div>
-
-                        <!-- Floating Statutory Badge -->
-                        <div class="collage-badge-card rounded-4 p-3 px-4 shadow-lg wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="badge-icon-box rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-award fa-2x text-warning"></i>
-                                </div>
-                                <div>
-                                    <h3 class="fw-bold text-white mb-0">40+ Years</h3>
-                                    <small class="text-white-50">Serving Kerala's Transport Sector</small>
-                                </div>
-                            </div>
+                    <!-- Single Floating Icon Image Card (Bottom-Right) -->
+                    <div class="single-welfare-icon-card rounded-4 shadow-lg bg-white d-none d-sm-flex align-items-center justify-content-center wow zoomIn" data-wow-delay="0.4s">
+                        <div class="icon-emblem-ring d-flex align-items-center justify-content-center">
+                            <i class="fas fa-hand-holding-heart fa-3x" style="color: #156628;"></i>
                         </div>
                     </div>
-                </div>
 
-                <!-- Right Column: Board Overview & Core Welfare Pillars -->
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="text-uppercase fw-bold" style="color: #5A0E24; letter-spacing: 1.5px; font-size: 13px;">STATUTORY BODY • GOVT. OF KERALA</span>
-                        <span style="width: 45px; height: 2px; background-color: #E4B028; display: inline-block;"></span>
-                    </div>
-                    <h2 class="display-6 fw-bold mb-3" style="color: #10375c;">About the Board</h2>
-                    <p class="text-muted fs-6 lh-base mb-4">
-                        The <strong>Kerala Motor Transport Workers' Welfare Fund Board (KMTWWFB)</strong> is a statutory body functioning under the <strong>Department of Labour and Skills, Government of Kerala</strong>. It was established to ensure social security, financial stability, and welfare for workers employed in the private motor transport sector across the state.
-                    </p>
-
-                    <!-- Headquarters & State-wide Structure Highlight -->
-                    <div class="hq-highlight-box rounded-4 p-3 p-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="d-flex align-items-start gap-3">
-                            <div class="hq-icon rounded-3 flex-shrink-0">
-                                <i class="fas fa-building fa-lg text-white"></i>
+                    <!-- Bottom-Left Floating Statutory Experience Badge -->
+                    <div class="collage-badge-card rounded-4 p-3 px-4 shadow-lg wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="badge-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fas fa-award fa-2x text-warning"></i>
                             </div>
                             <div>
-                                <h5 class="fw-bold text-primary mb-1">Headquarters &amp; Statewide Structure</h5>
-                                <p class="text-muted small mb-0 lh-base">
-                                    The Head Office is located in <strong>Kollam</strong>, supported by <strong>14 District Offices</strong> operating across Kerala, each headed by a <strong>District Executive Officer (DEO)</strong> to ensure accessible service delivery at the grassroots level.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Core Welfare Schemes 3-Card Mini Grid -->
-                    <h5 class="fw-bold text-primary mb-3"><i class="fas fa-shield-alt text-warning me-2"></i> Core Welfare Schemes</h5>
-                    <div class="row g-3">
-                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.3s">
-                            <div class="welfare-mini-card p-3 rounded-3 h-100">
-                                <i class="fas fa-hand-holding-usd fs-3 text-warning mb-2"></i>
-                                <h6 class="fw-bold text-primary small mb-1">Pensions</h6>
-                                <p class="text-muted mb-0" style="font-size: 12px;">Superannuation pension, disability pension, and family pension.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="welfare-mini-card p-3 rounded-3 h-100">
-                                <i class="fas fa-heartbeat fs-3 text-warning mb-2"></i>
-                                <h6 class="fw-bold text-primary small mb-1">Financial &amp; Medical Aid</h6>
-                                <p class="text-muted mb-0" style="font-size: 12px;">Ex-gratia accidental death assistance, medical support &amp; maternity benefits.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 wow zoomIn" data-wow-delay="0.5s">
-                            <div class="welfare-mini-card p-3 rounded-3 h-100">
-                                <i class="fas fa-graduation-cap fs-3 text-warning mb-2"></i>
-                                <h6 class="fw-bold text-primary small mb-1">Family Support</h6>
-                                <p class="text-muted mb-0" style="font-size: 12px;">Educational scholarships for children, daughter marriage aid &amp; retirement benefits.</p>
+                                <h3 class="fw-bold text-white mb-0">40+ Years</h3>
+                                <small class="text-white-50">Serving Kerala's Transport Sector</small>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Section 2: Tripartite Governance & Administration -->
-    <section class="governance-section py-5 my-4">
-        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 780px;">
-                <span class="badge rounded-pill px-3 py-2 mb-2 fw-bold" style="background-color: #f8f5ec; color: #5A0E24; border: 1px solid #E4B028;">
-                    <i class="fas fa-balance-scale text-warning me-1"></i> ADMINISTRATION &amp; GOVERNANCE
-                </span>
-                <h2 class="display-6 fw-bold text-primary mb-3">15-Member Tripartite Board Structure</h2>
-                <p class="text-muted mb-0">
-                    The Board follows a democratic tripartite governance model headed by a <strong>Government-appointed Chairman</strong> and managed by the <strong>Chief Executive Officer (CEO)</strong>.
+            <!-- Right Column: Board Overview & Core Welfare Pillars -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-uppercase fw-bold" style="color: #156628; letter-spacing: 1.5px; font-size: 13px;">STATUTORY BODY • GOVT. OF KERALA</span>
+                    <span style="width: 45px; height: 2px; background-color: #C89211; display: inline-block;"></span>
+                </div>
+                <h2 class="display-6 fw-bold mb-3" style="color: #124D1C;">About the Board</h2>
+                <p class="text-muted fs-6 lh-base mb-4">
+                    The <strong>Kerala Motor Transport Workers' Welfare Fund Board (KMTWWFB)</strong> is a statutory body functioning under the <strong>Department of Labour and Skills, Government of Kerala</strong>. It was established to ensure social security, financial stability, and welfare for workers employed in the private motor transport sector across the state.
                 </p>
+
+                <!-- Headquarters & State-wide Structure Highlight -->
+                <div class="hq-highlight-box rounded-4 p-3 p-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="hq-icon rounded-3 flex-shrink-0">
+                            <i class="fas fa-building fa-lg text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold text-primary mb-1">Headquarters &amp; Statewide Structure</h5>
+                            <p class="text-muted small mb-0 lh-base">
+                                The Head Office is located in <strong>Kollam</strong>, supported by <strong>14 District Offices</strong> operating across Kerala, each headed by a <strong>District Executive Officer (DEO)</strong> to ensure accessible service delivery at the grassroots level.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Welfare Schemes 3-Card Mini Grid -->
+                <h5 class="fw-bold text-primary mb-3"><i class="fas fa-shield-alt text-warning me-2"></i> Core Welfare Schemes</h5>
+                <div class="row g-3">
+                    <div class="col-md-4 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="welfare-mini-card p-3 rounded-3 h-100">
+                            <i class="fas fa-hand-holding-usd fs-3 text-warning mb-2"></i>
+                            <h6 class="fw-bold text-primary small mb-1">Pensions</h6>
+                            <p class="text-muted mb-0" style="font-size: 12px;">Superannuation pension, disability pension, and family pension.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
+                        <div class="welfare-mini-card p-3 rounded-3 h-100">
+                            <i class="fas fa-heartbeat fs-3 text-warning mb-2"></i>
+                            <h6 class="fw-bold text-primary small mb-1">Financial &amp; Medical Aid</h6>
+                            <p class="text-muted mb-0" style="font-size: 12px;">Ex-gratia accidental death assistance, medical support &amp; maternity benefits.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="welfare-mini-card p-3 rounded-3 h-100">
+                            <i class="fas fa-graduation-cap fs-3 text-warning mb-2"></i>
+                            <h6 class="fw-bold text-primary small mb-1">Family Support</h6>
+                            <p class="text-muted mb-0" style="font-size: 12px;">Educational scholarships for children, daughter marriage aid &amp; retirement benefits.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- 4 Cards: Leadership + 3 Tripartite Groups (5 + 5 + 5 = 15 Members) -->
-            <div class="row g-4">
-                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="gov-card rounded-4 p-4 text-center h-100">
-                        <div class="gov-icon-ring mx-auto mb-3">
-                            <i class="fas fa-user-tie fa-2x text-primary"></i>
-                        </div>
-                        <span class="badge bg-primary rounded-pill px-3 py-1 mb-2">Executive Head</span>
-                        <h5 class="fw-bold text-primary mb-2">Chairman &amp; CEO</h5>
-                        <p class="text-muted small mb-0">
-                            Led by a Government-appointed Chairman and administered by the Chief Executive Officer (CEO) at Kollam HQ.
-                        </p>
+        </div>
+    </div>
+</section>
+  <section class="leadership-v1 py-5 bg-light">
+    <div class="container py-4">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h5 class="text-uppercase fw-bold" style="color: #5A0E24; letter-spacing: 2px;">Our Leadership</h5>
+            <h2 class="display-6 fw-bold" style="color: #10375c;">Kerala Motor Transport Workers Welfare Fund Board</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="leader-split-card d-flex align-items-center bg-white rounded-4 overflow-hidden shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvx4_kBN87WhGrv0_j-ntZpZUnSe8hyUnbxr4y097QJEvoXCG8nj3Fq7w0&s=10" alt="Sri. V D Satheesan" class="split-photo">
+                    <div class="p-4">
+                        <span class="badge rounded-pill mb-2" style="background:#f8f5ec; color:#5A0E24; border:1px solid #E4B028;">Hon'ble Chief Minister</span>
+                        <h4 class="fw-bold mb-1" style="color:#10375c;">Sri. V D Satheesan</h4>
+                        <p class="text-muted small mb-0">Chief Minister of Kerala</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="gov-card rounded-4 p-4 text-center h-100">
-                        <div class="gov-icon-ring mx-auto mb-3">
-                            <span class="fw-bold fs-3 text-primary">05</span>
-                        </div>
-                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Government</span>
-                        <h5 class="fw-bold text-primary mb-2">Govt. Representatives</h5>
-                        <p class="text-muted small mb-0">
-                            5 senior officials nominated by the Government of Kerala to oversee policy, statutory compliance, and fund governance.
-                        </p>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="leader-split-card d-flex align-items-center bg-white rounded-4 overflow-hidden shadow-sm">
+                    <img src="https://kmtwwfb.kerala.gov.in/assets/img/officials/bindu-krishna.png" alt="Smt. Bindu Krishna" class="split-photo">
+                    <div class="p-4">
+                        <span class="badge rounded-pill mb-2" style="background:#f8f5ec; color:#5A0E24; border:1px solid #E4B028;">Hon'ble Minister</span>
+                        <h4 class="fw-bold mb-1" style="color:#10375c;">Smt. Bindu Krishna</h4>
+                        <p class="text-muted small mb-0">Minister for Women and Child Development, Labour, Animal Husbandry, and Dairy Development</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="gov-card rounded-4 p-4 text-center h-100">
-                        <div class="gov-icon-ring mx-auto mb-3">
-                            <span class="fw-bold fs-3 text-primary">05</span>
-                        </div>
-                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Employers</span>
-                        <h5 class="fw-bold text-primary mb-2">Employer Representatives</h5>
-                        <p class="text-muted small mb-0">
-                            5 members representing private motor transport vehicle owners and fleet operators across Kerala.
-                        </p>
+            </div>
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="leader-split-card d-flex align-items-center bg-white rounded-4 overflow-hidden shadow-sm">
+                    <img src="https://kmtwwfb.kerala.gov.in/assets/img/officials/malayalapuzha-jyothishkumar.jpeg" alt="Sri. Malayalapuzha JyothishKumar" class="split-photo">
+                    <div class="p-4">
+                        <span class="badge rounded-pill mb-2" style="background:#f8f5ec; color:#5A0E24; border:1px solid #E4B028;">Chairman</span>
+                        <h4 class="fw-bold mb-1" style="color:#10375c;">Sri. Malayalapuzha JyothishKumar</h4>
+                        <p class="text-muted small mb-0">Chairman, Kerala Motor Transport Workers Welfare Fund Board</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="gov-card rounded-4 p-4 text-center h-100">
-                        <div class="gov-icon-ring mx-auto mb-3">
-                            <span class="fw-bold fs-3 text-primary">05</span>
-                        </div>
-                        <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">Employees</span>
-                        <h5 class="fw-bold text-primary mb-2">Employee Representatives</h5>
-                        <p class="text-muted small mb-0">
-                            5 trade union &amp; worker representatives safeguarding the rights and welfare benefits of transport employees.
-                        </p>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="leader-split-card d-flex align-items-center bg-white rounded-4 overflow-hidden shadow-sm">
+                    <img src="https://kmtwwfb.kerala.gov.in/assets/img/officials/siyad.jpeg" alt="Sri. K S Mohammed Ziyad" class="split-photo">
+                    <div class="p-4">
+                        <span class="badge rounded-pill mb-2" style="background:#f8f5ec; color:#5A0E24; border:1px solid #E4B028;">CEO</span>
+                        <h4 class="fw-bold mb-1" style="color:#10375c;">Sri. K S Mohammed Ziyad</h4>
+                        <p class="text-muted small mb-0">Chief Executive Officer, Kerala Motor Transport Workers Welfare Fund Board</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+        <!-- Training End -->
+  
 
     <!-- Section 3: Historical Milestones Timeline (1985 to Digitalization) -->
     <section class="history-timeline-section py-5">
@@ -366,26 +346,103 @@
 
             </div>
 
-            <!-- Bottom Call-to-Action Strip with Gallery Preview -->
-            <div class="about-cta-banner rounded-4 p-4 p-md-5 mt-5 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-8">
-                        <h3 class="fw-bold text-white mb-2">Explore KMTWWFB Online Services &amp; Welfare Schemes</h3>
-                        <p class="text-white-50 mb-0">
-                            Register online as an employee or vehicle owner, pay monthly contributions seamlessly, or apply for welfare benefits.
-                        </p>
+          
+
+        </div>
+    </section>
+<!-- Board Members & District Representatives Section Start -->
+<section class="board-members-section py-5">
+    <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+        
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 780px;">
+            
+            <h2 class="display-6 fw-bold mb-2" style="color: #124D1C;">Board Members</h2>
+            <p class="text-muted small mb-0">
+                Meet the Board Directors representing KMTWWFB across Kerala.
+            </p>
+        </div>
+
+       
+
+        <!-- Board Members Photo Grid -->
+        <div class="row g-4" id="boardMembersGrid">
+            
+            <!-- Member 1 (Replace img src, Name, Designation & District with your actual data) -->
+            <div class="col-sm-6 col-md-4 col-xl-3 member-card-col wow fadeInUp" data-district="Kollam" data-wow-delay="0.1s">
+                <div class="member-profile-card rounded-4 overflow-hidden h-100 d-flex flex-column">
+                    <div class="member-photo-wrap">
+                        <img src="img/members/member-1.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" alt="Board Member">
+                        <span class="district-badge">
+                            <i class="fas fa-map-marker-alt me-1"></i> Kollam
+                        </span>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a href="service.html" class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-3 shadow-lg me-2">
-                            Explore Services <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
+                    <div class="member-info-body p-3 text-center flex-grow-1 d-flex flex-column justify-content-center">
+                        <h6 class="fw-bold mb-1 member-name">Member Name 1</h6>
+                        <span class="member-role d-block mb-1">Board Member (Govt. Representative)</span>
+                        <small class="member-dist-text"><i class="fas fa-building me-1"></i> Kollam District</small>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </section>
+            <!-- Member 2 -->
+            <div class="col-sm-6 col-md-4 col-xl-3 member-card-col wow fadeInUp" data-district="Thiruvananthapuram" data-wow-delay="0.2s">
+                <div class="member-profile-card rounded-4 overflow-hidden h-100 d-flex flex-column">
+                    <div class="member-photo-wrap">
+                        <img src="img/members/member-2.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" alt="Board Member">
+                        <span class="district-badge">
+                            <i class="fas fa-map-marker-alt me-1"></i> Thiruvananthapuram
+                        </span>
+                    </div>
+                    <div class="member-info-body p-3 text-center flex-grow-1 d-flex flex-column justify-content-center">
+                        <h6 class="fw-bold mb-1 member-name">Member Name 2</h6>
+                        <span class="member-role d-block mb-1">Board Member (Employee Representative)</span>
+                        <small class="member-dist-text"><i class="fas fa-building me-1"></i> Thiruvananthapuram District</small>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Member 3 -->
+            <div class="col-sm-6 col-md-4 col-xl-3 member-card-col wow fadeInUp" data-district="Ernakulam" data-wow-delay="0.3s">
+                <div class="member-profile-card rounded-4 overflow-hidden h-100 d-flex flex-column">
+                    <div class="member-photo-wrap">
+                        <img src="img/members/member-3.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" alt="Board Member">
+                        <span class="district-badge">
+                            <i class="fas fa-map-marker-alt me-1"></i> Ernakulam
+                        </span>
+                    </div>
+                    <div class="member-info-body p-3 text-center flex-grow-1 d-flex flex-column justify-content-center">
+                        <h6 class="fw-bold mb-1 member-name">Member Name 3</h6>
+                        <span class="member-role d-block mb-1">Board Member (Employer Representative)</span>
+                        <small class="member-dist-text"><i class="fas fa-building me-1"></i> Ernakulam District</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="col-sm-6 col-md-4 col-xl-3 member-card-col wow fadeInUp" data-district="Kozhikode" data-wow-delay="0.4s">
+                <div class="member-profile-card rounded-4 overflow-hidden h-100 d-flex flex-column">
+                    <div class="member-photo-wrap">
+                        <img src="img/members/member-4.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'" alt="Board Member">
+                        <span class="district-badge">
+                            <i class="fas fa-map-marker-alt me-1"></i> Kozhikode
+                        </span>
+                    </div>
+                    <div class="member-info-body p-3 text-center flex-grow-1 d-flex flex-column justify-content-center">
+                        <h6 class="fw-bold mb-1 member-name">Member Name 4</h6>
+                        <span class="member-role d-block mb-1">Board Member</span>
+                        <small class="member-dist-text"><i class="fas fa-building me-1"></i> Kozhikode District</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more members by copying any <div class="col-sm-6 col-md-4 col-xl-3 member-card-col" data-district="DistrictName"> block -->
+
+        </div>
+
+    </div>
+</section>
+<!-- Board Members & District Representatives Section End -->
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
