@@ -1,0 +1,239 @@
+/*** KMTWWFB Admin Portal Login Styles (css/login.css) ***/
+
+:root {
+    --lgn-green: #156628;
+    --lgn-green-dark: #124D1C;
+    --lgn-green-soft: #eef8f0;
+    --lgn-green-border: #cde5d3;
+    --lgn-gold: #C89211;
+}
+
+.login-page-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef8f0 0%, #fdfbf7 50%, #e4f3e8 100%);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ambient Background Orbs */
+.bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(65px);
+    z-index: 0;
+    pointer-events: none;
+    animation: orbFloat 10s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+    width: 340px;
+    height: 340px;
+    background: rgba(21, 102, 40, 0.16);
+    top: -80px;
+    left: -80px;
+}
+
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(200, 146, 17, 0.18);
+    bottom: -60px;
+    right: -60px;
+    animation-delay: 2s;
+}
+
+@keyframes orbFloat {
+    0%   { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(25px, -25px) scale(1.08); }
+}
+
+.login-top-nav,
+.login-main-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.login-main-wrapper {
+    flex: 1;
+}
+
+.back-home-pill {
+    background-color: #ffffff;
+    color: var(--lgn-green-dark);
+    border: 1.5px solid var(--lgn-gold);
+    transition: all 0.3s ease;
+}
+
+.back-home-pill:hover {
+    background-color: var(--lgn-green-dark);
+    color: #ffd66b;
+    transform: translateX(-3px);
+}
+
+/* Main Split Card */
+.login-glass-card {
+    background-color: #ffffff;
+    border: 1px solid var(--lgn-green-border);
+    box-shadow: 0 24px 55px rgba(18, 77, 28, 0.14) !important;
+}
+
+/* Left Visual Pane */
+.login-visual-pane {
+    background: linear-gradient(145deg, #0e3d16 0%, #156628 60%, #1c7a32 100%);
+    border-right: 3px solid var(--lgn-gold);
+}
+
+.visual-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 214, 107, 0.14) 1px, transparent 1px);
+    background-size: 22px 22px;
+    z-index: 1;
+}
+
+/* Vehicle & Road Animations (Bus, Auto, Taxi) */
+.spin-ring {
+    transform-origin: 230px 145px;
+    animation: slowRotate 26s linear infinite;
+}
+
+@keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.shield-float {
+    animation: hoverBob 3.4s ease-in-out infinite;
+}
+
+@keyframes hoverBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-7px); }
+}
+
+.bus-drive {
+    animation: vehicleSlide 4.5s ease-in-out infinite;
+}
+
+.auto-drive {
+    animation: vehicleBounce 2.6s ease-in-out infinite;
+}
+
+.taxi-drive {
+    animation: vehicleBounce 2.9s ease-in-out infinite 0.5s;
+}
+
+@keyframes vehicleSlide {
+    0%, 100% { transform: translateX(-6px); }
+    50%      { transform: translateX(6px); }
+}
+
+@keyframes vehicleBounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-3px); }
+}
+
+.road-dash {
+    animation: roadMove 1.8s linear infinite;
+}
+
+@keyframes roadMove {
+    from { stroke-dashoffset: 0; }
+    to   { stroke-dashoffset: -64; }
+}
+
+/* Right Form Pane */
+.login-lock-emblem {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--lgn-green-soft);
+    color: var(--lgn-green-dark);
+    border: 2px dashed var(--lgn-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.login-form-box:hover .login-lock-emblem {
+    transform: scale(1.08) rotate(6deg);
+    background-color: var(--lgn-green-dark);
+    color: #ffd66b;
+    border-style: solid;
+}
+
+/* Input Fields */
+.input-left-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--lgn-green);
+    z-index: 4;
+}
+
+.login-field {
+    height: 48px;
+    border-radius: 12px !important;
+    background-color: #f8fbf9 !important;
+    border: 1.5px solid var(--lgn-green-border) !important;
+    font-size: 0.94rem;
+    transition: all 0.3s ease;
+}
+
+.login-field:focus {
+    background-color: #ffffff !important;
+    border-color: var(--lgn-gold) !important;
+    box-shadow: 0 6px 18px rgba(21, 102, 40, 0.12) !important;
+}
+
+.password-eye-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    z-index: 4;
+}
+
+.password-eye-btn:hover {
+    color: var(--lgn-green-dark);
+}
+
+/* Submit Button with Shine Animation */
+.btn-login-animated {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #124D1C 0%, #156628 100%);
+    color: #ffd66b !important;
+    border: 2px solid var(--lgn-gold);
+    letter-spacing: 0.8px;
+    transition: all 0.35s ease;
+}
+
+.btn-login-animated::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.65s ease;
+}
+
+.btn-login-animated:hover::after {
+    left: 140%;
+}
+
+.btn-login-animated:hover {
+    background: linear-gradient(135deg, #C89211 0%, #a87608 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(200, 146, 17, 0.32) !important;
+}

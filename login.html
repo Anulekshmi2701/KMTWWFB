@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Login - KMTWWFB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template & Custom Login Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body class="login-page-body">
+
+    <!-- Ambient Animated Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <!-- Top Minimal Header Bar -->
+    <header class="login-top-nav py-3 px-4 px-lg-5">
+        <div class="container-fluid d-flex align-items-center justify-content-between" style="max-width: 1320px;">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none gap-2">
+                <img src="img/logo.png" alt="KMTWWFB Logo" style="height: 44px; width: auto;">
+                <div>
+                    <h5 class="mb-0 fw-bold" style="color: #124D1C; letter-spacing: 0.5px;">KMTWWFB</h5>
+                    <small class="text-muted d-none d-sm-block" style="font-size: 11px;">Kerala Motor Transport Workers' Welfare Fund Board</small>
+                </div>
+            </a>
+            <a href="index.html" class="btn btn-sm rounded-pill px-3 py-2 fw-bold back-home-pill">
+                <i class="fas fa-arrow-left me-1"></i> Back to Website
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Split Animated Admin Login Container -->
+    <main class="login-main-wrapper d-flex align-items-center py-4 px-3 px-lg-5">
+        <div class="container" style="max-width: 1140px;">
+            <div class="login-glass-card rounded-4 overflow-hidden shadow-lg">
+                <div class="row g-0 align-items-stretch">
+                    
+                    <!-- Left Column: KMTWWFB Admin Portal + Animated Auto, Bus & Taxi Scene -->
+                    <div class="col-lg-6 login-visual-pane p-4 p-xl-5 d-flex flex-column justify-content-between position-relative overflow-hidden">
+                        
+                        <div class="visual-grid-overlay"></div>
+
+                        <!-- Clean Title Only -->
+                        <div class="position-relative z-2 text-center text-lg-start wow fadeInDown" data-wow-delay="0.1s">
+                            <h2 class="text-white fw-extrabold mb-1" style="letter-spacing: 0.5px;">KMTWWFB Admin Portal</h2>
+                            <div style="width: 60px; height: 4px; background-color: #C89211; border-radius: 4px;" class="mx-auto mx-lg-0"></div>
+                        </div>
+
+                        <!-- Animated Transport Illustration Stage (Auto, Bus & Taxi) -->
+                        <div class="login-animation-stage my-3 position-relative z-2 text-center wow zoomIn" data-wow-delay="0.2s">
+                            <svg viewBox="0 0 460 310" class="img-fluid w-100" style="max-width: 430px;" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Soft Glowing Sun / Moon Backdrop -->
+                                <circle cx="230" cy="145" r="115" fill="rgba(255, 214, 107, 0.12)" stroke="#C89211" stroke-width="1.5" stroke-dasharray="8 6" class="spin-ring"/>
+                                <circle cx="230" cy="145" r="85" fill="rgba(255, 255, 255, 0.06)"/>
+
+                                <!-- Stylized Kerala Coconut Palms (Silhouette) -->
+                                <g opacity="0.28" fill="#ffd66b">
+                                    <path d="M75 235 Q82 175 70 130" stroke="#ffd66b" stroke-width="4" fill="none"/>
+                                    <path d="M70 130 Q45 120 35 138 M70 130 Q55 108 40 112 M70 130 Q92 115 105 132 M70 130 Q88 105 102 110" stroke="#ffd66b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <path d="M385 235 Q378 180 390 140" stroke="#ffd66b" stroke-width="4" fill="none"/>
+                                    <path d="M390 140 Q365 130 355 146 M390 140 Q412 126 425 142 M390 140 Q405 116 420 120" stroke="#ffd66b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- Center Admin Shield Emblem -->
+                                <g class="shield-float">
+                                    <path d="M230 42 L262 55 L262 82 C262 102 248 117 230 124 C212 117 198 102 198 82 L198 55 Z" fill="#C89211" stroke="#ffffff" stroke-width="2.5"/>
+                                    <path d="M220 82 L227 89 L242 74" fill="none" stroke="#124D1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+
+                                <!-- 1. Stage Carriage Bus (Center-Left, Animated Cruise) -->
+                                <g class="bus-drive">
+                                    <rect x="135" y="135" width="165" height="68" rx="12" fill="#ffffff" stroke="#124D1C" stroke-width="2.5"/>
+                                    <!-- Bus Roof & Green/Gold Livery Stripe -->
+                                    <path d="M135 174 L300 174 L300 188 L135 188 Z" fill="#156628"/>
+                                    <path d="M135 188 L300 188 L300 194 L135 194 Z" fill="#C89211"/>
+                                    <!-- Bus Windows -->
+                                    <rect x="146" y="146" width="28" height="20" rx="4" fill="#124D1C"/>
+                                    <rect x="180" y="146" width="28" height="20" rx="4" fill="#124D1C"/>
+                                    <rect x="214" y="146" width="28" height="20" rx="4" fill="#124D1C"/>
+                                    <rect x="248" y="146" width="38" height="22" rx="4" fill="#124D1C"/>
+                                    <!-- Headlight -->
+                                    <circle cx="295" cy="192" r="4" fill="#ffd66b"/>
+                                    <!-- Bus Wheels -->
+                                    <circle cx="172" cy="205" r="13" fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+                                    <circle cx="172" cy="205" r="5" fill="#C89211"/>
+                                    <circle cx="262" cy="205" r="13" fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+                                    <circle cx="262" cy="205" r="5" fill="#C89211"/>
+                                </g>
+
+                                <!-- 2. Kerala Black & Yellow Autorickshaw (Left Foreground, Animated Bob) -->
+                                <g class="auto-drive">
+                                    <!-- Yellow Canopy Top -->
+                                    <path d="M52 178 C52 162, 65 155, 85 155 L112 155 L122 182 L52 182 Z" fill="#ffd66b" stroke="#124D1C" stroke-width="2"/>
+                                    <!-- Black Body -->
+                                    <path d="M48 182 L124 182 L128 214 L46 214 Z" fill="#1e293b" stroke="#ffffff" stroke-width="1.5"/>
+                                    <!-- Windshield & Passenger Cabin -->
+                                    <polygon points="96,160 110,160 118,180 96,180" fill="#e0f2fe"/>
+                                    <rect x="60" y="161" width="28" height="19" rx="3" fill="#eef8f0"/>
+                                    <!-- Auto Wheels -->
+                                    <circle cx="64" cy="216" r="10" fill="#111827" stroke="#ffd66b" stroke-width="2"/>
+                                    <circle cx="115" cy="216" r="10" fill="#111827" stroke="#ffd66b" stroke-width="2"/>
+                                </g>
+
+                                <!-- 3. Kerala Taxi Car (Right Foreground, Animated Bob) -->
+                                <g class="taxi-drive">
+                                    <!-- Taxi Roof Sign -->
+                                    <rect x="348" y="166" width="22" height="8" rx="3" fill="#ffd66b" stroke="#124D1C" stroke-width="1.5"/>
+                                    <!-- Cabin -->
+                                    <path d="M326 190 L340 174 L382 174 L396 190 Z" fill="#ffd66b" stroke="#124D1C" stroke-width="2"/>
+                                    <!-- Car Body -->
+                                    <rect x="312" y="190" width="102" height="24" rx="7" fill="#1e293b" stroke="#ffd66b" stroke-width="2"/>
+                                    <!-- Yellow Taxi Stripe -->
+                                    <rect x="314" y="198" width="98" height="5" fill="#ffd66b"/>
+                                    <!-- Car Wheels -->
+                                    <circle cx="334" cy="216" r="10" fill="#111827" stroke="#ffffff" stroke-width="2"/>
+                                    <circle cx="390" cy="216" r="10" fill="#111827" stroke="#ffffff" stroke-width="2"/>
+                                </g>
+
+                                <!-- Animated Road Line -->
+                                <line x1="25" y1="230" x2="435" y2="230" stroke="#ffd66b" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="45" y1="242" x2="415" y2="242" stroke="rgba(255, 255, 255, 0.45)" stroke-width="2.5" stroke-dasharray="18 14" class="road-dash"/>
+                            </svg>
+                        </div>
+
+                        <!-- Bottom IT Cell Line -->
+                        <div class="pt-3 border-top border-white border-opacity-25 position-relative z-2 text-center text-lg-start small text-white-50">
+                            <i class="fas fa-headset text-warning me-1"></i> KMTWWFB IT Cell • <strong class="text-white">0474-2742818</strong>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Clean User ID & Password Admin Login Form -->
+                    <div class="col-lg-6 bg-white p-4 p-sm-5 d-flex flex-column justify-content-center">
+                        <div class="login-form-box mx-auto w-100" style="max-width: 400px;">
+                            
+                            <div class="text-center mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="login-lock-emblem mx-auto mb-3">
+                                    <i class="fas fa-user-shield fa-lg"></i>
+                                </div>
+                                <h3 class="fw-bold mb-1" style="color: #124D1C;">Admin Login</h3>
+                                <p class="text-muted small mb-0">Enter your User ID and Password to continue</p>
+                            </div>
+
+                            <!-- Clean Login Form (User ID & Password Only) -->
+                            <form id="kmtLoginForm" action="#" method="post" class="wow fadeInUp" data-wow-delay="0.2s">
+                                
+                                <!-- User ID -->
+                                <div class="mb-3">
+                                    <label for="loginUsername" class="form-label small fw-bold mb-1" style="color: #124D1C;">
+                                        User ID
+                                    </label>
+                                    <div class="position-relative">
+                                        <span class="input-left-icon"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="loginUsername" name="user_id" class="form-control login-field ps-5" placeholder="Enter User ID" required>
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="mb-4">
+                                    <label for="loginPassword" class="form-label small fw-bold mb-1" style="color: #124D1C;">
+                                        Password
+                                    </label>
+                                    <div class="position-relative">
+                                        <span class="input-left-icon"><i class="fas fa-lock"></i></span>
+                                        <input type="password" id="loginPassword" name="password" class="form-control login-field ps-5 pe-5" placeholder="Enter Password" required>
+                                        <button type="button" id="togglePasswordBtn" class="btn password-eye-btn" aria-label="Toggle Password Visibility">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Animated Submit Button -->
+                                <button type="submit" id="loginSubmitBtn" class="btn btn-login-animated w-100 py-3 rounded-pill fw-bold shadow">
+                                    <span class="btn-text">LOGIN <i class="fas fa-sign-in-alt ms-2"></i></span>
+                                </button>
+
+                                <!-- Feedback Alert -->
+                                <div id="loginFeedbackBox" class="alert alert-warning mt-3 py-2 px-3 small rounded-3 text-center" style="display: none;"></div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Password Show / Hide Toggle
+            const pwdInput = document.getElementById("loginPassword");
+            const togglePwdBtn = document.getElementById("togglePasswordBtn");
+            togglePwdBtn.addEventListener("click", function () {
+                const isPwd = pwdInput.type === "password";
+                pwdInput.type = isPwd ? "text" : "password";
+                this.innerHTML = isPwd ? '<i class="far fa-eye-slash"></i>' : '<i class="far fa-eye"></i>';
+            });
+
+            // Submit Button Loading Animation
+            const loginForm = document.getElementById("kmtLoginForm");
+            const submitBtn = document.getElementById("loginSubmitBtn");
+            const feedbackBox = document.getElementById("loginFeedbackBox");
+
+            loginForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Logging in...';
+
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span class="btn-text">LOGIN <i class="fas fa-sign-in-alt ms-2"></i></span>';
+                    feedbackBox.style.display = "block";
+                    feedbackBox.innerHTML = '<i class="fas fa-check-circle me-1"></i> Form submitted! Connect action URL to your backend login controller.';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
