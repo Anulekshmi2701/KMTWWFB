@@ -219,67 +219,83 @@
             </div>
         </div>
     </section>
-
-    <!-- Section 3: 14 District Offices Directory & Google Map -->
-    <section class="district-map-section py-4 bg-white">
-        <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
-            <div class="row g-3 align-items-stretch">
-                
-                <!-- Left: 14 District Offices Quick Directory -->
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="district-box rounded-4 p-3 p-md-4 h-100">
+<!-- Section 3: Interactive 14 District Offices Directory & Dynamic Google Map -->
+<section class="district-map-section py-4 bg-white">
+    <div class="container-fluid px-4 px-lg-5" style="max-width: 1440px;">
+        <div class="row g-3 align-items-stretch">
+            
+            <!-- Left: 14 District Offices Interactive Directory -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="district-box rounded-4 p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
                         <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 pb-2 border-bottom">
                             <div>
                                 <h5 class="fw-bold mb-0" style="color: #124D1C;"><i class="fas fa-map-marked-alt text-warning me-2"></i> 14 District Executive Offices</h5>
-                                <small class="text-muted">Kerala Motor Transport Workers' Welfare Fund Board</small>
+                                <small class="text-muted">Click any district below to view its office location on the map</small>
                             </div>
                             <span class="badge rounded-pill px-3 py-1" style="background-color: #eef8f0; color: #156628; border: 1px solid #C89211;">Statewide Network</span>
                         </div>
 
-                        <div class="row g-2 small">
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Thiruvananthapuram</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip fw-bold"><i class="fas fa-star text-warning me-1"></i> Kollam (HQ)</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Pathanamthitta</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Alappuzha</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Kottayam</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Idukki</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Ernakulam</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Thrissur</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Palakkad</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Malappuram</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Kozhikode</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Wayanad</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Kannur</div></div>
-                            <div class="col-6 col-sm-4"><div class="dist-chip"><i class="fas fa-dot-circle text-warning me-1"></i> Kasaragod</div></div>
+                        <div class="row g-2 small" id="districtChipsGrid">
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="thiruvananthapuram"><i class="fas fa-dot-circle text-warning me-1"></i> Thiruvananthapuram</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip active w-100 text-start fw-bold" data-dist="kollam"><i class="fas fa-star text-warning me-1"></i> Kollam (HQ)</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="pathanamthitta"><i class="fas fa-dot-circle text-warning me-1"></i> Pathanamthitta</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="alappuzha"><i class="fas fa-dot-circle text-warning me-1"></i> Alappuzha</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="kottayam"><i class="fas fa-dot-circle text-warning me-1"></i> Kottayam</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="idukki"><i class="fas fa-dot-circle text-warning me-1"></i> Idukki</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="ernakulam"><i class="fas fa-dot-circle text-warning me-1"></i> Ernakulam</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="thrissur"><i class="fas fa-dot-circle text-warning me-1"></i> Thrissur</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="palakkad"><i class="fas fa-dot-circle text-warning me-1"></i> Palakkad</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="malappuram"><i class="fas fa-dot-circle text-warning me-1"></i> Malappuram</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="kozhikode"><i class="fas fa-dot-circle text-warning me-1"></i> Kozhikode</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="wayanad"><i class="fas fa-dot-circle text-warning me-1"></i> Wayanad</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="kannur"><i class="fas fa-dot-circle text-warning me-1"></i> Kannur</button></div>
+                            <div class="col-6 col-sm-4"><button type="button" class="dist-chip w-100 text-start" data-dist="kasaragod"><i class="fas fa-dot-circle text-warning me-1"></i> Kasaragod</button></div>
                         </div>
+                    </div>
 
-                        <!-- <div class="mt-3 p-2 px-3 rounded-3" style="background-color: #eef8f0; border-left: 4px solid #C89211;">
-                            <small class="text-dark d-block">
-                                <strong>Need District Assistance?</strong> Contact your respective District Executive Officer (DEO) during office hours or reach out to the Head Office Helpdesk at <strong>0474-2742818</strong>.
-                            </small>
-                        </div> -->
+                    <!-- Selected District Office Info Box -->
+                    <div id="selectedDistrictDetails" class="mt-3 p-3 rounded-3" style="background-color: #eef8f0; border-left: 4px solid #C89211;">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <h6 class="fw-bold mb-1" id="distOfficeTitle" style="color: #124D1C;">
+                                    <i class="fas fa-building text-warning me-1"></i> Kollam District &amp; Head Office (HQ)
+                                </h6>
+                                <p class="small text-dark mb-1" id="distOfficeAddress">
+                                    Jayam Building, MWRA, Mundakkal West, Kollam - 691001
+                                </p>
+                                <small class="fw-semibold" style="color: #156628;" id="distOfficePhone">
+                                    <i class="fas fa-phone-alt text-warning me-1"></i> 0474-2742818, 0474-2741288
+                                </small>
+                            </div>
+                            <a id="distExternalMapLink" href="https://maps.google.com/?q=Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kollam" target="_blank" rel="noopener noreferrer" class="btn btn-sm rounded-pill px-3 fw-bold flex-shrink-0" style="background-color: #124D1C; color: #ffd66b; font-size: 11px;">
+                                Open Map <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Right: Embedded Location Map (Kollam Head Office) -->
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="rounded-4 overflow-hidden shadow-sm border h-100" style="min-height: 300px; border-color: #cde5d3 !important;">
-                        <iframe 
-                            src="https://www.google.com/maps?q=Mundakkal+West,+Kollam,+Kerala+691001&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0; min-height: 300px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="KMTWWFB Head Office Location - Kollam">
-                        </iframe>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Right: Dynamic Embedded Location Map -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="rounded-4 overflow-hidden shadow-sm border h-100 position-relative" style="min-height: 350px; border-color: #cde5d3 !important;">
+                    <iframe 
+                        id="districtMapFrame"
+                        src="https://www.google.com/maps?q=Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Mundakkal+Kollam&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 350px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="KMTWWFB District Office Location">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-4 wow fadeIn" data-wow-delay="0.2s">
@@ -375,5 +391,119 @@
             this.reset();
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const districtOffices = {
+                thiruvananthapuram: {
+                    title: "Thiruvananthapuram District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Thiruvananthapuram, Kerala",
+                    phone: "0471-2472219",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Thiruvananthapuram"
+                },
+                kollam: {
+                    title: "Kollam District & Head Office (HQ)",
+                    address: "Jayam Building, MWRA, Mundakkal West, Kollam - 691001",
+                    phone: "0474-2742818, 0474-2741288",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Mundakkal+Kollam"
+                },
+                pathanamthitta: {
+                    title: "Pathanamthitta District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Pathanamthitta, Kerala",
+                    phone: "0468-2222382",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Pathanamthitta"
+                },
+                alappuzha: {
+                    title: "Alappuzha District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Alappuzha, Kerala",
+                    phone: "0477-2252645",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Alappuzha"
+                },
+                kottayam: {
+                    title: "Kottayam District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Kottayam, Kerala",
+                    phone: "0481-2560461",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kottayam"
+                },
+                idukki: {
+                    title: "Idukki District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Thodupuzha, Idukki, Kerala",
+                    phone: "04862-222845",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Thodupuzha+Idukki"
+                },
+                ernakulam: {
+                    title: "Ernakulam District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Kakkanad / Ernakulam, Kerala",
+                    phone: "0484-2422977",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Ernakulam"
+                },
+                thrissur: {
+                    title: "Thrissur District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Thrissur, Kerala",
+                    phone: "0487-2331592",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Thrissur"
+                },
+                palakkad: {
+                    title: "Palakkad District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Palakkad, Kerala",
+                    phone: "0491-2523694",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Palakkad"
+                },
+                malappuram: {
+                    title: "Malappuram District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Malappuram, Kerala",
+                    phone: "0483-2734865",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Malappuram"
+                },
+                kozhikode: {
+                    title: "Kozhikode District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Kozhikode, Kerala",
+                    phone: "0495-2370548",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kozhikode"
+                },
+                wayanad: {
+                    title: "Wayanad District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Kalpetta, Wayanad, Kerala",
+                    phone: "04936-203472",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kalpetta+Wayanad"
+                },
+                kannur: {
+                    title: "Kannur District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Kannur, Kerala",
+                    phone: "0497-2700654",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kannur"
+                },
+                kasaragod: {
+                    title: "Kasaragod District Executive Office",
+                    address: "District Executive Officer, KMTWWFB, Vidyanagar, Kasaragod, Kerala",
+                    phone: "04994-255365",
+                    query: "Kerala+Motor+Transport+Workers+Welfare+Fund+Board+Kasaragod"
+                }
+            };
+        
+            const chips = document.querySelectorAll("#districtChipsGrid .dist-chip");
+            const mapFrame = document.getElementById("districtMapFrame");
+            const titleEl = document.getElementById("distOfficeTitle");
+            const addressEl = document.getElementById("distOfficeAddress");
+            const phoneEl = document.getElementById("distOfficePhone");
+            const externalLinkEl = document.getElementById("distExternalMapLink");
+        
+            chips.forEach(chip => {
+                chip.addEventListener("click", function () {
+                    chips.forEach(c => c.classList.remove("active"));
+                    this.classList.add("active");
+        
+                    const key = this.getAttribute("data-dist");
+                    const data = districtOffices[key];
+                    if (!data) return;
+        
+                    titleEl.innerHTML = `<i class="fas fa-building text-warning me-1"></i> ${data.title}`;
+                    addressEl.textContent = data.address;
+                    phoneEl.innerHTML = `<i class="fas fa-phone-alt text-warning me-1"></i> ${data.phone}`;
+                    mapFrame.src = `https://www.google.com/maps?q=${data.query}&output=embed`;
+                    externalLinkEl.href = `https://maps.google.com/?q=${data.query}`;
+                });
+            });
+        });
+        </script>
 </body>
 </html>

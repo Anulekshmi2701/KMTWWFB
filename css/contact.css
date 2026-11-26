@@ -145,3 +145,27 @@
     border-color: var(--cnt-gold);
     transform: translateX(3px);
 }
+.dist-chip {
+    background-color: #ffffff;
+    border: 1px solid var(--cnt-green-border);
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #124D1C;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.dist-chip:hover {
+    background-color: var(--cnt-green-soft);
+    border-color: var(--cnt-gold);
+    transform: translateY(-2px);
+}
+
+/* Active Selected District Button */
+.dist-chip.active {
+    background-color: #124D1C;
+    color: #ffd66b;
+    border-color: #C89211;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(18, 77, 28, 0.2);
+}
