@@ -1,4 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Exact Official Malayalam Terms for Navbar
+    const exactTerms = {
+        en: {
+            home: "Home",
+            about: "About",
+            gallery: "Gallery",
+            welfare: "Welfare Benefits",
+            contact: "Contact",
+            login: "ADMIN LOGIN"
+        },
+        ml: {
+            home: "ഹോം",
+            about: "ഞങ്ങളെക്കുറിച്ച്",
+            gallery: "ഗാലറി",
+            welfare: "ക്ഷേമ പദ്ധതികൾ",
+            contact: "ബന്ധപ്പെടുക",
+            login: "അഡ്മിൻ ലോഗിൻ"
+        }
+    };
+
+    function applyExactNavbarTerms(lang) {
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+            const href = (link.getAttribute("href") || "").toLowerCase();
+            link.classList.add("notranslate"); // Stops Google Translate from changing "ഹോം" to "വീട്"
+            if (href.includes("index.html")) link.textContent = exactTerms[lang].home;
+            else if (href.includes("about.html")) link.textContent = exactTerms[lang].about;
+            else if (href.includes("gallery.html")) link.textContent = exactTerms[lang].gallery;
+            else if (href.includes("welfare.html")) link.textContent = exactTerms[lang].welfare;
+            else if (href.includes("contact.html")) link.textContent = exactTerms[lang].contact;
+        });
+
+        const adminBtn = document.querySelector('a[href="login.html"]');
+        if (adminBtn) {
+            adminBtn.classList.add("notranslate");
+            adminBtn.textContent = exactTerms[lang].login;
+        }
+    }
+
     // 1. Add "മലയാളം / English" Toggle Button to the Topbar (Next to Social Icons)
     const topbarRight = document.querySelector(".container-fluid .social-icons");
     if (topbarRight && !document.getElementById("kmtLangToggleBtn")) {
@@ -79,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function triggerGoogleTranslate(lang) {
         localStorage.setItem("kmt_site_lang", lang);
         document.cookie = `googtrans=/en/${lang}; path=/;`;
+        applyExactNavbarTerms(lang);
         
         const btnText = document.getElementById("kmtLangBtnText");
         if (btnText) {
@@ -98,8 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 200);
     }
 
-    // Set initial button label on page load
+    // Set initial button label & exact navbar terms on page load
     const initialLang = localStorage.getItem("kmt_site_lang") || "en";
+    applyExactNavbarTerms(initialLang);
     const btnTextEl = document.getElementById("kmtLangBtnText");
     if (btnTextEl) {
         btnTextEl.textContent = initialLang === "en" ? "മലയാളം" : "English";
