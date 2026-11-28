@@ -1,0 +1,217 @@
+/*** Welfare Benefits & Step-by-Step Instructions Styles (css/benefits.css) ***/
+
+:root {
+    --bnf-green: #156628;
+    --bnf-green-dark: #124D1C;
+    --bnf-green-soft: #eef8f0;
+    --bnf-green-border: #cde5d3;
+    --bnf-gold: #C89211;
+}
+
+/* Top Banner */
+.benefits-hero-banner {
+    background: linear-gradient(135deg, rgba(18, 77, 28, 0.94) 0%, rgba(21, 102, 40, 0.9) 100%),
+                url('../img/2.png') center / cover no-repeat;
+    border-bottom: 3px solid var(--bnf-gold);
+}
+
+.benefits-workspace {
+    background-color: #fdfbf7;
+}
+
+/* Left Sidebar Menu Card */
+.benefits-sidebar-card {
+    background-color: #ffffff;
+    border: 1px solid var(--bnf-green-border);
+    position: sticky;
+    top: 90px;
+}
+
+.benefit-menu-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    background-color: #f8fbf9;
+    border: 1px solid var(--bnf-green-border);
+    border-radius: 12px;
+    color: var(--bnf-green-dark);
+    cursor: pointer;
+    transition: all 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.benefit-menu-btn:hover {
+    background-color: var(--bnf-green-soft);
+    border-color: var(--bnf-gold);
+    transform: translateX(4px);
+}
+
+.benefit-menu-btn.active {
+    background: linear-gradient(135deg, #124D1C 0%, #156628 100%);
+    border-color: var(--bnf-gold);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(18, 77, 28, 0.2);
+    transform: translateX(5px);
+}
+
+.menu-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--bnf-green-soft);
+    color: var(--bnf-green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 15px;
+    transition: all 0.28s ease;
+}
+
+.benefit-menu-btn.active .menu-icon-box {
+    background-color: rgba(255, 214, 107, 0.2);
+    color: #ffd66b;
+    border: 1px solid var(--bnf-gold);
+}
+
+.menu-title {
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.status-pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.status-pill.open {
+    color: #15803d;
+}
+
+.benefit-menu-btn.active .status-pill.open {
+    color: #4ade80;
+}
+
+.status-pill.closed {
+    color: #b91c1c;
+    opacity: 0.85;
+}
+
+.benefit-menu-btn.active .status-pill.closed {
+    color: #fca5a5;
+}
+
+.arrow-indicator {
+    font-size: 11px;
+    opacity: 0.5;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.benefit-menu-btn:hover .arrow-indicator,
+.benefit-menu-btn.active .arrow-indicator {
+    opacity: 1;
+    transform: translateX(3px);
+    color: #ffd66b;
+}
+
+/* Right Content Stage with Smooth Transition */
+.benefit-detail-stage {
+    background-color: #ffffff;
+    border: 1px solid var(--bnf-green-border);
+    border-top: 4px solid var(--bnf-gold);
+    min-height: 520px;
+}
+
+.panel-animate-in {
+    animation: benefitStageFade 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes benefitStageFade {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Info & Eligibility Highlight Cards */
+.info-highlight-box {
+    background-color: var(--bnf-green-soft);
+    border: 1px solid var(--bnf-green-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-highlight-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(18, 77, 28, 0.08);
+}
+
+/* Step-by-Step Procedure Cards */
+.step-flow-card {
+    background-color: #ffffff;
+    border: 1.5px solid var(--bnf-green-border);
+    position: relative;
+    transition: all 0.32s ease;
+}
+
+.step-flow-card:hover {
+    border-color: var(--bnf-gold);
+    background-color: #f9fdf9;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(18, 77, 28, 0.12);
+}
+
+.step-num-badge {
+    display: inline-block;
+    background-color: var(--bnf-green-dark);
+    color: #ffd66b;
+    border: 1px solid var(--bnf-gold);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    letter-spacing: 0.6px;
+}
+
+/* Bottom Apply CTA Strip */
+.apply-cta-banner {
+    background: linear-gradient(135deg, #124D1C 0%, #156628 100%);
+    border: 1.5px solid var(--bnf-gold);
+}
+
+/* Temporarily Closed Official Notice Box */
+.closed-notice-banner {
+    background-color: #fef2f2;
+    border: 1.5px solid #fca5a5;
+    border-left: 5px solid #dc2626;
+    animation: gentlePulseBorder 2.5s infinite;
+}
+
+.closed-icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fee2e2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gentlePulseBorder {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.15); }
+    50%      { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+}
+
+@media (max-width: 991.98px) {
+    .benefits-sidebar-card {
+        position: static;
+    }
+}
