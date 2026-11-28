@@ -1779,3 +1779,10 @@ background-repeat: no-repeat;
     padding: 10px 12px;
     animation: msgPopLeft 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+.hero-blended-gif {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    mix-blend-mode: multiply; /* ചിത്രത്തിന്റെ വെളുത്ത ബാക്ക്ഗ്രൗണ്ട് കൂടി ബ്ലെൻഡ് ആയി പോകാൻ */
+}
