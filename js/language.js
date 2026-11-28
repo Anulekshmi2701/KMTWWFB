@@ -37,18 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 1. Add "മലയാളം / English" Toggle Button to the Topbar (Next to Social Icons)
-    const topbarRight = document.querySelector(".container-fluid .social-icons");
-    if (topbarRight && !document.getElementById("kmtLangToggleBtn")) {
+    // 1. Add "മലയാളം / English" Toggle Button right after ADMIN LOGIN
+    const adminLoginBtn = document.querySelector('#navbarCollapse a[href="login.html"]');
+    if (adminLoginBtn && !document.getElementById("kmtLangToggleBtn")) {
         const langBtn = document.createElement("button");
         langBtn.type = "button";
         langBtn.id = "kmtLangToggleBtn";
-        langBtn.className = "btn btn-sm rounded-pill px-3 py-1 fw-bold d-inline-flex align-items-center gap-2 ms-3 notranslate kmt-lang-btn";
+        langBtn.className = "btn rounded-pill py-2 px-3 ms-lg-3 mb-3 mb-md-3 mb-lg-0 fw-bold d-inline-flex align-items-center gap-2 notranslate kmt-lang-btn";
         langBtn.innerHTML = `
             <i class="fas fa-globe" style="color: #C89211;"></i>
             <span id="kmtLangBtnText">മലയാളം</span>
         `;
-        topbarRight.appendChild(langBtn);
+        adminLoginBtn.insertAdjacentElement("afterend", langBtn);
     }
 
     // 2. Keep Brand Logo Name "KMTWWFB" & Icons unchanged during translation
@@ -69,9 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
             background-color: #FAF3E1 !important;
             color: #5A0E24 !important;
             border: 1.5px solid #E4B028 !important;
-            font-size: 12px !important;
+            font-size: 13px !important;
             cursor: pointer;
-            height: 30px;
             transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
             transform: rotate(0deg) scale(1) !important;
         }

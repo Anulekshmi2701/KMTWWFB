@@ -1046,8 +1046,30 @@
                 });
             });
 
-            // Initialize Default View (Educational Scholarship)
-            renderUnifiedScheme("scholarship");
+           // 1. Read ?scheme=... or #scheme from URL
+function getSchemeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryScheme = urlParams.get("scheme");
+    if (queryScheme && allSchemes[queryScheme]) {
+        return queryScheme;
+    }
+
+    // Fallback: Check #hash (e.g., welfare.html#marriage)
+    const hashScheme = window.location.hash.replace("#", "").trim();
+    if (hashScheme && allSchemes[hashScheme]) {
+        return hashScheme;
+    }
+
+    return "scholarship";
+}
+
+// 2. Load the matching scheme immediately
+renderUnifiedScheme(getSchemeFromURL());
+
+// 3. Also update if URL hash changes
+window.addEventListener("hashchange", function () {
+    renderUnifiedScheme(getSchemeFromURL());
+});
         });
     </script>
         <script src="js/language.js"></script>
